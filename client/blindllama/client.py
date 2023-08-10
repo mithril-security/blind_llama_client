@@ -16,22 +16,8 @@ MITHRIL_SERVICES_URL = os.getenv("MITHRIL_SERVICES_URL", "api.cloud.mithrilsecur
 class BlindLlamaDebugModeWarning(Warning):
     pass
 
-class Parameters(BaseModel):
-    do_sample: bool = False
-    max_new_tokens: int = 256
-    return_full_text: bool = False
-
-    @validator("max_new_tokens")
-    def valid_input(cls, v):
-        if v < 8:
-            raise ValidationError("The max number of new tokens cannot be lower than 8")
-        elif v > 386:
-            raise ValidationError("The max number of new tokens cannot be higher than 386")
-        return v
-
 class PromptRequest(BaseModel):
     inputs: str
-    parameters: Optional[Parameters]
 
     @validator("inputs")
     def valid_input(cls, v):
@@ -89,8 +75,7 @@ class Client():
             str: The result of the prediction made by the BlindLlama server
         """
 
-        param = Parameters()
-        req = PromptRequest(inputs=prompt, parameters=param)
+        req = PromptRequest(inputs=prompt)
         Headers = { "accesstoken" : self.jwt }
         resp = requests.post(
             self.base_url + "/",
