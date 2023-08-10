@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "blindllama"
-version = "0.1.0"
+version = "0.0.1"
 description = ""
 authors = ["Mithril Security <contact@mithrilsecurity.io>"]
 readme = "README.md"
