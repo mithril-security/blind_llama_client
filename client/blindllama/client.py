@@ -10,6 +10,7 @@ import blindllama.pb.licensing_pb2_grpc as licensing_pb2_grpc
 import os
 import grpc
 import requests
+import json
 
 MITHRIL_SERVICES_URL = os.getenv("MITHRIL_SERVICES_URL", "api.cloud.mithrilsecurity.io")
 
@@ -45,9 +46,12 @@ class Client():
             )
 
         stub = licensing_pb2_grpc.LicensingServiceStub(channel)
-        enclave_request = licensing_pb2.GetEnclaveRequest(api_key=api_key)
+        try:
+            enclave_request = licensing_pb2.GetEnclaveRequest(api_key=api_key)
+            response = stub.GetEnclave(enclave_request)
+        except grpc.RpcError as rpc_error:
+            raise APIKeyException(api_key, rpc_error.details())
 
-        response = stub.GetEnclave(enclave_request)
         host_ports = response.enclave_url.split(":")
         ports = host_ports[1].split("/")
 
@@ -82,8 +86,14 @@ class Client():
             json=req.dict(),
             headers=Headers
         )
-        return resp.text
-        
+        ret_json = resp.json()
+        generated_text = ""
+        for elem in ret_json:
+            if "error" in elem:
+                raise PredictionException(elem['error'])
+            if "generated_text" in elem:
+                generated_text += f"{elem['generated_text'].strip()}\n"
+        return generated_text.strip()
 
 def connect(api_key: str = "") -> Client:
     """Connect to the BlindLlama service.
