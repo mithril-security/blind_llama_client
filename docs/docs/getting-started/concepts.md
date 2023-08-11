@@ -3,11 +3,12 @@ ________________________________________________________
 
 ## Overview
 
-In this section, we will describe the main concepts that are at the core of BlindLlama, namely how we harden an AI inference server to remove data exposure even to our admins and how we use TPMs to provide cryptographic proof to outsiders that those controls are in place.
+In this section, we will describe the key concepts that are at the core of BlindLlama:
 
-The first concept to understand is how we make an 
-
-Then we will explain how secure hardware with TPMs can provide irrefutable proof we indeed serve AI models only inside hardened environments that mask customers to us.
++ [**Hardened environments**](#hardened-environments): We describe how we harden our AI inference server to remove data exposure even to our admins
++ [**Trusted Computing Base (TCB)**](#trusted-computing-base-tcb): We describe the trusted and verified elements of our APIs
++ [**Trusted Platform Modules (TPMs)**](#trusted-platform-modules-tpms): We describe how we use TPMs to provide cryptographic proof to outsiders that those controls are in place.
++ [**Attested TLS**](#attested-tls): We describe how we secure communications with our APIs
 
 ## Hardened environments
 
@@ -20,7 +21,7 @@ We also take additional security measures to make sure our environments have a h
 ![hardened-env-dark](../../assets/hardened-dark.png#only-dark)
 ![hardened-env-light](../../assets/hardened-light.png#only-light)
 
-## TCB
+## Trusted Computing Base (TCB)
 
 Normally, when you deploy an application on a machine, you have to trust multiple components: the application code itself, the operating system, the hypervisor and the hardware.
 
