@@ -41,9 +41,9 @@
     <li><a href="#-about-the-project">About the project</a></li>
     <li><a href="#-use-cases">Use cases</a></li>
     <li><a href="#-getting-started">Getting started</a></li>
-    <li><a href="⚠️-limitations">Limitations</a></li>
-    <li><a href="🎯-vision-&-roadmap">Vision & roadmap</a></li>
-    <li><a href="🔐-who-made-blindllama?">Who made BlindLlama?</a></li>
+    <li><a href="#-limitations">Limitations</a></li>
+    <li><a href="#-vision-&-roadmap">Vision & roadmap</a></li>
+    <li><a href="#-who-made-blindlama?">Who made BlindLlama?</a></li>
     <li><a href="#-contact">Contact</a></li>
   </ol>
 </details>
@@ -105,7 +105,7 @@ ________________________________________________________
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## ⚠️ Limitations
+## 🚩 Limitations
 ________________________________________________________
 
 In both scenarios, **the hardware and cloud providers have to be trusted to some extent**. Whilst hardware providers are usually trusted, in some highly-sensitive use cases, cloud providers are not trusted, e.g., governmental confidential workloads.
@@ -140,7 +140,7 @@ ___________________________
 
 + **Our historical project [BlindAI](docs/past-projects/blindai.md) was successfully audited** by Quarkslab. Although both projects differ (BlindAI was meant for the confidential deployment of ONNX models inside Intel SGX enclaves), we want to highlight that we are serious about our security standards and know how to code secure remote attestation. -->
 
-## 🎯 Vision & roadmap
+## ⌛ Vision & roadmap
 ___________________________
 
 **Planned new features**:
@@ -152,7 +152,7 @@ ___________________________
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🔐 Who made BlindLlama?
+## 🦙 Who made BlindLlama?
 ________________________________________________________
 
 BlindLlama is developed by **Mithril Security**, a startup focused on **democratizing privacy-friendly AI using secure hardware solutions**. 
