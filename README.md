@@ -42,14 +42,13 @@
     <li><a href="#-use-cases">Use cases</a></li>
     <li><a href="#-getting-started">Getting started</a></li>
     <li><a href="#-limitations">Limitations</a></li>
-    <li><a href="#-vision-&-roadmap">Vision & roadmap</a></li>
-    <li><a href="#-who-made-blindllama?">Who made BlindLlama?</a></li>
+    <li><a href="#-vision-and-roadmap">Vision and roadmap</a></li>
+    <li><a href="#about-us">About us</a></li>
     <li><a href="#-contact">Contact</a></li>
   </ol>
 </details>
 
 ## 📜 About the project
-________________________________________________________
 
 🛠️ **BlindLlama** makes it easy to use open-source LLMs by using **Zero-trust AI APIs** that abstract all the complexity of model deployment while ensuring **users’ data is never exposed** to us thanks to end-to-end protection with **secure hardware**.
 
@@ -63,7 +62,7 @@ Our backend has two key properties:
   
 	⚠️ **WARNING:** BlindLlama is still **under development**. Do not use it in production!
 
-	We are working towards the first audit of BlindLlama in the following months. Please refer to the <a href="#-vision-&-roadmap">roadmap</a> to know the current status of the project.
+	We are working towards the first audit of BlindLlama in the following months. Please refer to the <a href="#-vision-and-roadmap">roadmap</a> to know the current status of the project.
 
 We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/BlindLlama/issues) on GitHub, <a href="#-contact">reach out to us</a> or see our guide on how to audit BlindLlama (**coming soon!**).
 
@@ -96,7 +95,6 @@ BlindLlama virtually provides the same level of security, privacy, and control a
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Getting started
-________________________________________________________
 
 - Check out our [Quick tour](https://blindllama.readthedocs.io/en/latest/docs/getting-started/quick-tour/), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
 - Find out more about [How we protect your data](https://blindllama.readthedocs.io/en/latest/docs/getting-started/how-we-protect-your-data/)
@@ -105,8 +103,7 @@ ________________________________________________________
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## ⚠️ Limitations
-________________________________________________________
+## 🚩 Limitations
 
 In both scenarios, **the hardware and cloud providers have to be trusted to some extent**. Whilst hardware providers are usually trusted, in some highly-sensitive use cases, cloud providers are not trusted, e.g., governmental confidential workloads.
 
@@ -140,8 +137,7 @@ ___________________________
 
 + **Our historical project [BlindAI](docs/past-projects/blindai.md) was successfully audited** by Quarkslab. Although both projects differ (BlindAI was meant for the confidential deployment of ONNX models inside Intel SGX enclaves), we want to highlight that we are serious about our security standards and know how to code secure remote attestation. -->
 
-## 🎯 Vision & roadmap
-___________________________
+## 🎯 Vision and roadmap
 
 **Planned new features**:
 
@@ -152,8 +148,9 @@ ___________________________
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🔒 Who made BlindLlama?
-________________________________________________________
+
+## 🦙 Who made BlindLlama? 
+<a name="about-us"></a>
 
 BlindLlama is developed by **Mithril Security**, a startup focused on **democratizing privacy-friendly AI using secure hardware solutions**. 
 
