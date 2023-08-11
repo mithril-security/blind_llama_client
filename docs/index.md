@@ -2,7 +2,7 @@
 ________________________________________________________
 
 <font size="5"><span style="font-weight: 200">
-Making AI confidential & transparent
+Making AI Confidential & Transparent
 </font></span>
 
 ## 📜 What is BlindLlama?
