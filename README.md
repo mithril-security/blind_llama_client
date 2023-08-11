@@ -58,12 +58,9 @@ Our backend has two key properties:
 
 + **Confidentiality**: Your data is **never accessible to us**. We serve AI models inside **hardened environments** that do not expose data even to our admins. All points of access, such as SSH, logs, networks, etc., are blocked to ensure the isolation of data.
 
-+ **Transparency**: We provide you with verifiable **cryptographic proof** that these controls are in place, thanks to the use of [Trusted Platform Modules (TPMs)](./docs/docs/getting-started/concepts.md).
-
-
-!!! warning
++ **Transparency**: We provide you with verifiable **cryptographic proof** that these controls are in place, thanks to the use of [Trusted Platform Modules (TPMs)](https://blindllama.readthedocs.io/en/latest/docs/getting-started/concepts/).
   
-	BlindLlama is still **under development**. Do not use it in production!
+	⚠️ **WARNING:** BlindLlama is still **under development**. Do not use it in production!
 
 	We are working towards the first audit of BlindLlama in the following months. Please refer to the [roadmap](#🎯-vision--roadmap) to know the current status of the project.
 
@@ -91,7 +88,7 @@ Several scenarios can be answered by using BlindLlama, such as:
 
 + BlindLlama is simply a drop-in replacement to query a remotely hosted model instead of having to go through complex local deployment. We do not cover training from scratch, but we will cover fine-tuning soon.
 + BlindLlama allows you to quickly and securely leverage models which are open-source, such as Llama 2, StarCoder, etc. **Proprietary models from OpenAI, Anthropic, and Cohere are not supported** yet as we would require them to modify their backend to offer a Zero-trust AI infrastructure like ours.
-+ **BlindLlama’s trust model implies some level of trust in Cloud providers and hardware providers** since we leverage secure hardware available and managed by Cloud providers (see our [trust model section](./docs/getting-started/blindllama-101.md/#trust-model) for more details).
++ **BlindLlama’s trust model implies some level of trust in Cloud providers and hardware providers** since we leverage secure hardware available and managed by Cloud providers (see our [trust model section](https://blindllama.readthedocs.io/en/latest/docs/getting-started/blindllama-101/) for more details).
 
 BlindLlama virtually provides the same level of security, privacy, and control as solutions provided by Cloud providers like Azure OpenAI Services.
 
@@ -100,10 +97,10 @@ BlindLlama virtually provides the same level of security, privacy, and control a
 ## 🚀 Getting started
 ________________________________________________________
 
-- Check out our [Quick tour](./docs/getting-started/quick-tour.md), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
-- Find out more about [How we protect your data](./docs/getting-started/how-we-protect-your-data.md)
-- Refer to our [Concepts](./docs/getting-started/concepts.md) guide for more information on key concepts
-- Learn more about BlindLlama's design with our [BlindLlama 101](./docs/getting-started/blindllama-101.md) guide
+- Check out our [Quick tour](https://blindllama.readthedocs.io/en/latest/docs/getting-started/quick-tour/), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
+- Find out more about [How we protect your data](https://blindllama.readthedocs.io/en/latest/docs/getting-started/how-we-protect-your-data/)
+- Refer to our [Concepts](https://blindllama.readthedocs.io/en/latest/docs/getting-started/concepts/) guide for more information on key concepts
+- Learn more about BlindLlama's design with our [BlindLlama 101](https://blindllama.readthedocs.io/en/latest/docs/getting-started/blindllama-101/) guide
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
