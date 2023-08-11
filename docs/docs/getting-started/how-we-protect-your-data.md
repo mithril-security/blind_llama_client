@@ -39,7 +39,7 @@ Therefore for users to fully trust us, there needs to be reviews of both the Pyt
 
 Our code is open-source for people to review it, and we have previously had BlindAI, a similar AI deployment solution audited. We will have BlindLlama audited, too to provide a high level of confidence that our hardened environment for privacy-friendly AI consumption indeed implements all the security checks we mention.
 
-You can find more about the low-level details of our implementation of a Zero-trust AI service using hardened AI servers that can be verified with TPMs in our advanced security section.
+You can find more about the low-level details of our implementation of a Zero-trust AI service using hardened AI servers that can be verified with TPMs in our advanced security section (**coming soon!**).
 
 
 ## Secure AI consumption
