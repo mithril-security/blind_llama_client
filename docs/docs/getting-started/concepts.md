@@ -6,8 +6,8 @@ ________________________________________________________
 In this section, we will describe the key concepts that are at the core of BlindLlama:
 
 + [**Hardened environments**](#hardened-environments): We describe how we harden our AI inference server to remove data exposure even to our admins
-+ [**Trusted Computing Base (TCB)**](#trusted-computing-base-tcb): We describe the trusted and verified elements of our APIs
-+ [**Trusted Platform Modules (TPMs)**](#trusted-platform-modules-tpms): We describe how we use TPMs to provide cryptographic proof to outsiders that those controls are in place.
++ [**Trusted Computing Base (TCB)**](#trusted-computing-base-tcb): We detail the trusted and verified components in our APIs
++ [**Trusted Platform Modules (TPMs)**](#trusted-platform-modules-tpms): We explain how we use TPMs to provide cryptographic proof to outsiders that those controls are in place
 + [**Attested TLS**](#attested-tls): We describe how we secure communications with our APIs
 
 ## Hardened environments
