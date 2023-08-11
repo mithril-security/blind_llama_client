@@ -43,7 +43,7 @@
     <li><a href="#-getting-started">Getting started</a></li>
     <li><a href="#-limitations">Limitations</a></li>
     <li><a href="#-vision-and-roadmap">Vision and roadmap</a></li>
-    <li><a href="who-made-blindllama?">Who made BlindLlama?</a></li>
+    <li><a href="#-about-us">About us</a></li>
     <li><a href="#-contact">Contact</a></li>
   </ol>
 </details>
@@ -148,7 +148,9 @@ ___________________________
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Who made BlindLlama?
+
+## 🦙 Who made BlindLlama? 
+<a name="about-us"></a>
 
 BlindLlama is developed by **Mithril Security**, a startup focused on **democratizing privacy-friendly AI using secure hardware solutions**. 
 
