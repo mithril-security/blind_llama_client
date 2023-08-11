@@ -58,7 +58,7 @@ The BlindLlama server uses this signed quote to create a cryptographic proof fil
 
 If any of the hashes in the certificate created when deploying our server do not match with the the expected values hardcoded into our API client- an error will be raised and the end user will know this is not an authentic API built with the expected codebase on the expected stack.
 
-![proof-fail](../../assets/verification-cropped.png)
+![verification-light](../../assets/verification-cropped.png)
 
 By enabling users to verify that our code and stack have not been modified or tampered with, we are able to provide robust assurances about code integrity to end users.
 

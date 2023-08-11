@@ -125,8 +125,9 @@
 }
 
 /******* max width for large images *******/
-img[alt=PCR-values] { max-width: 350px; }
-img[alt=TPM] { max-width: 100px; }
-img[alt=trust-model-dark] { max-width: 700px; display: block; margin-left: auto; margin-right: auto;}
-img[alt=trust-model-light] { max-width: 700px; display: block; margin-left: auto; margin-right: auto;}
+img[alt=tcb-light] { max-width: 600px; display: block; margin-left: auto; margin-right: auto;}
+img[alt=tcb-dark] { max-width: 600px; display: block; margin-left: auto; margin-right: auto;}
+img[alt=trust-model-light] { max-width: 600px; display: block; margin-left: auto; margin-right: auto;}
+img[alt=trust-model-dark] { max-width: 600px; display: block; margin-left: auto; margin-right: auto;}
+
 
