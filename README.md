@@ -43,7 +43,7 @@
     <li><a href="#-getting-started">Getting started</a></li>
     <li><a href="#-limitations">Limitations</a></li>
     <li><a href="#-vision-and-roadmap">Vision and roadmap</a></li>
-    <li><a href="#-about-us">About us</a></li>
+    <li><a href="#about-us">About us</a></li>
     <li><a href="#-contact">Contact</a></li>
   </ol>
 </details>
