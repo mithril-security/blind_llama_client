@@ -43,7 +43,7 @@
     <li><a href="#-getting-started">Getting started</a></li>
     <li><a href="#-limitations">Limitations</a></li>
     <li><a href="#-vision-and-roadmap">Vision and roadmap</a></li>
-    <li><a href="#-About us">About us</a></li>
+    <li><a href="#-about us">About us</a></li>
     <li><a href="#-contact">Contact</a></li>
   </ol>
 </details>
@@ -62,7 +62,7 @@ Our backend has two key properties:
   
 	⚠️ **WARNING:** BlindLlama is still **under development**. Do not use it in production!
 
-	We are working towards the first audit of BlindLlama in the following months. Please refer to the <a href="#-vision-&-roadmap">roadmap</a> to know the current status of the project.
+	We are working towards the first audit of BlindLlama in the following months. Please refer to the <a href="#-vision-and-roadmap">roadmap</a> to know the current status of the project.
 
 We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/BlindLlama/issues) on GitHub, <a href="#-contact">reach out to us</a> or see our guide on how to audit BlindLlama (**coming soon!**).
 
