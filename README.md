@@ -103,14 +103,6 @@ BlindLlama virtually provides the same level of security, privacy, and control a
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚩 Limitations
-
-In both scenarios, **the hardware and cloud providers have to be trusted to some extent**. Whilst hardware providers are usually trusted, in some highly-sensitive use cases, cloud providers are not trusted, e.g., governmental confidential workloads.
-
-Since we remove ourselves as the service provider from the Trusted Computing Base through hardened environments with attestation, the level of trust and the components to be trusted when using BlindLlama is equivalent to using cloud providers’ products for AI APIs, such as Azure OpenAI Services or Google Vertex AI, which are deployed on customers’ virtual private cloud (VPC).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!--
 ## 📚 How is the documentation structured?
 ____________________________________________
