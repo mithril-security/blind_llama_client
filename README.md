@@ -16,6 +16,7 @@
 
 <h1 align="center">BlindLlama</h1>
 
+[![Docs][docs-shield]][docs-url]
 [![Website][website-shield]][website-url]
 [![Blog][blog-shield]][blog-url]
 </div>
@@ -189,6 +190,7 @@ BlindLlama builds on the foundations of BlindAI but provides much faster perform
 [twitter]: https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white
 [linkedin-url]: https://www.linkedin.com/company/mithril-security-company/
 [website-url]: https://www.mithrilsecurity.io
+[docs-url]: https://blindllama.readthedocs.io/en/latest/
 [website-shield]: https://img.shields.io/badge/website-000000?style=for-the-badge&colorB=555
 [blog-url]: https://blog.mithrilsecurity.io/
 [blog-shield]: https://img.shields.io/badge/Blog-000?style=for-the-badge&logo=ghost&logoColor=yellow&colorB=555
