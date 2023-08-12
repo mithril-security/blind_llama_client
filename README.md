@@ -16,7 +16,6 @@
 
 <h1 align="center">BlindLlama</h1>
 
-[![Docs][docs-shield]][docs-url]
 [![Website][website-shield]][website-url]
 [![Blog][blog-shield]][blog-url]
 </div>
