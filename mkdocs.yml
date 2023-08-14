@@ -108,15 +108,15 @@ nav:
 # - 📚 Integrations:
 #   -  Configure your YAML file: 'docs/tutorials/yaml.md'
 
-  - 💡 Concepts:
-    - Overview: 'docs/concepts/overview.md'
-    - Hardened environments: 'docs/concepts/hardened-environments.md'
-    - Trusted Computing Base (TCB): 'docs/concepts/TCB.md'
-    - Trusted Platform Modules (TPMs): 'docs/concepts/TPMs.md'
-    - Attested TLS: 'docs/concepts/attested-tls.md'
+- 💡 Concepts:
+  - Overview: 'docs/concepts/overview.md'
+  - Hardened environments: 'docs/concepts/hardened-environments.md'
+  - Trusted Computing Base): 'docs/concepts/TCB.md'
+  - Trusted Platform Modules: 'docs/concepts/TPMs.md'
+  - Attested TLS: 'docs/concepts/attested-tls.md'
 
-  - 🔒 Advanced Security (COMING SOON ⌛):
-    - Overview: 'docs/advanced-security/overview.md'
+- 🔒 Advanced Security:
+  - Overview: 'docs/advanced-security/overview.md'
 
 - 🛠️ API reference: 'blindllama/client.html'
 
