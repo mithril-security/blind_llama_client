@@ -115,8 +115,8 @@ nav:
     - Trusted Platform Modules (TPMs): 'docs/concepts/TPMs.md'
     - Attested TLS: 'docs/concepts/attested-tls.md'
 
- - 🔒 Advanced Security (COMING SOON ⌛):
-     - Overview: 'docs/advanced-security/overview.md'
+  - 🔒 Advanced Security (COMING SOON ⌛):
+    - Overview: 'docs/advanced-security/overview.md'
 
 - 🛠️ API reference: 'blindllama/client.html'
 
