@@ -31,6 +31,9 @@ If any of the hashes in the certificate created when deploying our server do not
 ![verification-light](../../assets/verification-cropped.png)
 
 By enabling users to verify that our code and stack have not been modified or tampered with, we are able to provide robust assurances about code integrity to end users.
+<div style="text-align: left;">
+  <a href="../TCB" class="btn">Back</a>
+</div>
 
 <div style="text-align: right;">
   <a href="../attested-tls" class="btn">Next</a>

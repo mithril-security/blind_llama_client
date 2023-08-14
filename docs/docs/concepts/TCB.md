@@ -15,6 +15,10 @@ The Cloud provider typically buys the hardware and serves VMs through a hypervis
 
 Now that we have introduced the concept of TCB, we will see in the next page how TPMs can provide non-forgeable measurements of the TCB to attest that a specific code is loaded.
 
+<div style="text-align: left;">
+  <a href="../hardened-environments" class="btn">Back</a>
+</div>
+
 <div style="text-align: right;">
   <a href="../TPMs" class="btn">Next</a>
 </div>

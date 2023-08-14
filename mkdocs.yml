@@ -99,7 +99,10 @@ markdown_extensions:
 
 # Documentation tree
 nav:
-- 🏠 Overview: 'index.md'
+- 🏠 What is BlindLlama: 
+  - Overview: 'index.md'
+  - Architecture: './docs/blind_llama/architecture.md'
+  - Trust model: './docs/blind_llama/trust-model.md'
 
 - 🚀 Getting Started: 
   - Quick Tour: 'docs/getting-started/quick-tour.md'

@@ -20,6 +20,10 @@ That is why we leverage secure hardware modules, known as TPMs, to provide crypt
 
 We will see in the next pages how we can use TPMs to create such irrefutable proof to convince external users their data is only handled by trustworthy code. 
 
+<div style="text-align: left;">
+  <a href="../overview" class="btn">Back</a>
+</div>
+
 <div style="text-align: right;">
   <a href="../TCB" class="btn">Next</a>
 </div>
