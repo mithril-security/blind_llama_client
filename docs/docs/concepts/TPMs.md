@@ -8,6 +8,7 @@ TPMs are secure hardware components that are commonly used to securely store art
 Platform integrity with TPMs is achieved by storing measurements of the whole software stack of a machine, from the UEFI to the OS, which can then be verified (**attested**). We can also use TPMs to measure and attest additional arbitrary elements such as customizable items.
 
 In the case of BlindLlama, we additionally attest:
+
 + The **BlindLlama** inference server code
 + The **weights** we serve
 + The **ssl certificate** used for secure communications
