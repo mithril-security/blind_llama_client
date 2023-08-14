@@ -18,10 +18,10 @@ pip install blind_llama
 
 ### Authenticate
 
-Then, you will need to provide a token. You can get one on our Mithril Cloud to get started for free. It that can then be set in as an environment variable:
+Then, you will need to provide a token. You can get one on our [Mithril Cloud](https://cloud.mithrilsecurity.io/) to get started for free. It that can then be set in as an environment variable:
 
 ```bash
-export BlindLlama_API_TOKEN=
+export BLIND_LLAMA_API_KEY=<YOUR_API_KEY>
 ```
 
 ### Run
@@ -33,8 +33,6 @@ import blind_llama
 
 blind_llama.run("llama-2-7B", input={"prompt": "Write me a poem"}) 
 ```
-
-You can discover other models to experiment with here.
 
 ### Security
 
