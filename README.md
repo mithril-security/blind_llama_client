@@ -18,7 +18,7 @@
 
 [![Website][website-shield]][website-url]
 [![Blog][blog-shield]][blog-url]
-[![Docs][docs-shield]][doc-url]
+[![Docs][docs-shield]][docs-url]
 </div>
 
  <p align="center">
