@@ -116,7 +116,7 @@ nav:
 # - 🔒 Advanced Security:
 #   - Threat model: 'docs/security/threat-model.md'
 
-#- 🛠️ API reference: 'cli/blindllama/cli/client.html'
+- 🛠️ API reference: 'blindllama/client.html'
 
 # - 💫 Other projects: 
 #   - BlindBox: 'docs/past-projects/blindbox.md'
