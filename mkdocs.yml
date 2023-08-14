@@ -111,7 +111,7 @@ nav:
 - 💡 Concepts:
   - Overview: 'docs/concepts/overview.md'
   - Hardened environments: 'docs/concepts/hardened-environments.md'
-  - Trusted Computing Base): 'docs/concepts/TCB.md'
+  - Trusted Computing Base: 'docs/concepts/TCB.md'
   - Trusted Platform Modules: 'docs/concepts/TPMs.md'
   - Attested TLS: 'docs/concepts/attested-tls.md'
 
