@@ -18,6 +18,7 @@
 
 [![Website][website-shield]][website-url]
 [![Blog][blog-shield]][blog-url]
+[![Docs][docs-shield]][doc-url]
 </div>
 
  <p align="center">
@@ -173,6 +174,8 @@ BlindLlama builds on the foundations of BlindAI but provides much faster perform
 [project-url]: https://github.com/mithril-security/aicert
 [twitter-url]: https://twitter.com/MithrilSecurity
 [contact-url]: https://www.mithrilsecurity.io/contact
+[docs-shield]: https://img.shields.io/badge/Docs-000000?style=for-the-badge&colorB=555
+[docs-url]: https://blindllama.readthedocs.io/en/latest/
 [license-shield]: https://img.shields.io/github/license/mithril-security/aicert.svg?style=for-the-badge
 [contact]: https://img.shields.io/badge/Contact_us-000000?style=for-the-badge&colorB=555
 [project]: https://img.shields.io/badge/Project-000000?style=for-the-badge&colorB=555
