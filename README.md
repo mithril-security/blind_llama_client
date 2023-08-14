@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/mithril-security/BlindLlama">
+  <a href="https://github.com/mithril-security/blind_llama">
     <img src="https://github.com/mithril-security/blindai/raw/main/docs/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -66,7 +66,7 @@ Our backend has two key properties:
 
 	We are working towards the first audit of BlindLlama in the following months. Please refer to the <a href="#-vision-and-roadmap">roadmap</a> to know the current status of the project.
 
-We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/BlindLlama/issues) on GitHub, <a href="#-contact">reach out to us</a> or see our guide on how to audit BlindLlama (**coming soon!**).
+We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/blind_llama/issues) on GitHub, <a href="#-contact">reach out to us</a> or see our guide on how to audit BlindLlama (**coming soon!**).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

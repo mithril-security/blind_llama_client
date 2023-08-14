@@ -7,6 +7,10 @@ TLS keeps all data sent between two hosts safe by encrypting the data using a un
 
 With BlindLlama, end users can verify that TLS is implemented for our APIs as part of TPM-based attestation.
 
+<div style="text-align: left;">
+  <a href="../TPMs" class="btn">Back</a>
+</div>
+
 <div style="text-align: right;">
   <a href="https://blindllama.readthedocs.io/en/latest/" class="btn">Home</a>
 </div>

@@ -7,8 +7,8 @@ site_description: >-
   covering data exploration and machine learning.
 
 # Repository
-repo_name: mithril-security/BlindLlama
-repo_url: https://github.com/mithril-security/BlindLlama
+repo_name: mithril-security/blind_llama
+repo_url: https://github.com/mithril-security/blind_llama
 
 # Configuration
 theme:
@@ -99,7 +99,10 @@ markdown_extensions:
 
 # Documentation tree
 nav:
-- 🏠 Overview: 'index.md'
+- 🏠 What is BlindLlama: 
+  - Overview: 'index.md'
+  - Architecture: './docs/blind_llama/architecture.md'
+  - Trust model: './docs/blind_llama/trust-model.md'
 
 - 🚀 Getting Started: 
   - Quick Tour: 'docs/getting-started/quick-tour.md'
