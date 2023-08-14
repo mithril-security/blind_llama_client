@@ -104,14 +104,17 @@ nav:
 - 🚀 Getting Started: 
   - Quick Tour: 'docs/getting-started/quick-tour.md'
   - How we protect your data: 'docs/getting-started/how-we-protect-your-data.md'
-  - Concepts: 'docs/getting-started/concepts.md'
   - BlindLlama 101: 'docs/getting-started/blindllama-101.md'
 
 # - 📚 Integrations:
 #   -  Configure your YAML file: 'docs/tutorials/yaml.md'
 
-# - 💡 Examples:
-#     - Virtual TPMs: 'docs/concepts/VTPMs.md'
+  - 💡 Concepts:
+    - Overview: 'docs/concepts/overview.md'
+    - Hardened environments: 'docs/concepts/hardened-environments.md'
+    - Trusted Computing Base (TCB): 'docs/concepts/TCB.md'
+    - Trusted Platform Modules (TPMs): 'docs/concepts/TPMs.md'
+    - Attested TLS: 'docs/concepts/attested-tls.md'
 
 # - 🔒 Advanced Security:
 #   - Threat model: 'docs/security/threat-model.md'
