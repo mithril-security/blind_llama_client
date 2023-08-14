@@ -19,7 +19,7 @@ At the end of this process, users will know that when using our Python SDK, they
 
 We remove all admin access from the AI server, such as SSH access to the machine, logs, telemetry, I/O, etc. so that once the AI server is running, we are *virtually blind* to data sent to us. Because we have no access to data, we can neither see it or use it for other purposes.
 
-We provide more details about **hardened environments** on our [concepts page](./concepts.md/#hardened-environments).
+We provide more details about **hardened environments** on our [concepts page](../concepts/hardened-environments.md).
 
 ### 2. Proving privacy controls are applied
 
@@ -29,7 +29,7 @@ With BlindLlama, we use secure hardware, Trusted Platform Modules (TPMs), to cre
 
 Basically, the TPMs create a hash of the whole stack used to perform AI serving, from the OS all the way to our hardened AI server. 
 
-We provide more information about TPMs on our [concepts page](./concepts.md/#trusted-platform-modules-tpms).
+We provide more information about TPMs on our [concepts page](../concepts/TPMs.md).
 
 ### 3. Auditing the whole stack
 
@@ -58,4 +58,4 @@ We can verify that the code base launched corresponds to the audited/verified co
 
 Once the user knows they are talking to a hardened AI server, they can use a public key attached to the certificate, which is associated with a private key that only lives inside the hardened environment and is not accessible even to us, to initiate a TLS connection that ends inside the hardened AI server.
 
-More information about attestation and attested TLS can be found on the [concepts page](./concepts.md/#attested-tls)
+More information about attestation and attested TLS can be found on the [concepts page](../concepts/attested-tls.md)
