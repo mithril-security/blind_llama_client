@@ -25,7 +25,8 @@ Let's take a look at how this works step-by-step:
 3. The caddy-generated TLS certificate is hashed by the BlindLlama server and stored in the TPM platform register PCR15. For more details about TPMs and PCRs, see our guide on [TPMs](./TPMs.md).
 4. The server generates a cryptographic proof file that includes all the hashed values stored in the TPM's PCRs. The TLS certificate is therefore included in the proof file, which is then shared with clients when they connect with the server.
 
-[tls-hash](../../assets/tls-hash.png)
+
+![tls-hash](../../assets/tls-hash.png)
 
 **Client-side**:
 
@@ -33,12 +34,15 @@ Let's take a look at how this works step-by-step:
   + The server's TLS certificate from the connection
   + The cryptographic proof file from the server
 
-[certificates](../../assets/certificates.png)
+
+![certificates](../../assets/certificates.png)
+
 
 2. This proof file which contains the hash of the server's TLS certificate is automatically verified against the certificate of the current connection. 
 3. If the TLS certificate hash in the proof file does not match a hash of the TLS certificate of the server in the current connection, the connection will fail and an error is raised.
 
-[matching](../../assets/matching.png)
+
+![matching](../../assets/matching.png)
 
 
 <div style="text-align: left;">
