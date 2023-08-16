@@ -6,14 +6,16 @@ Before talking about the actual technology that allows us to provide code integr
 TCB refers to the different technical components you need to trust, from the hardware all the way up to the software, through the hypervisor, OS, and so on.
 We refer to the page on TCB and parties that are trusted in regular AI SaaS and Zero-trust AI SaaS.
 
-For instance, as an external user of an AI SaaS application, here are the different components we need to trust:
+Let's take a look at the TCB of a typical AI API vs BlindLLama's TCB.
 
-![tcb-dark](../../assets/TCB-dark.png#only-dark)
-![tcb-light](../../assets/TCB-light.png#only-light)
+![tcb-dark](../../assets/tcb-dark.png#only-dark)
+![tcb-light](../../assets/tcb-light.png#only-light)
 
-The Cloud provider typically buys the hardware and serves VMs through a hypervisor to AI providers, who then are in charge of choosing the OS and providing the AI inference server. This is simplified as there are many more components that are part of the stack we could have omitted, such as bootloader, kernel, etc.
+With a typical AI API, the Cloud provider buys the **hardware** and **provides a VM with a particular OS** through a **hypervisor** to **the AI API provider**, who deploys **their server code and model** on the VM. 
 
-Now that we have introduced the concept of TCB, we will see in the next page how TPMs can provide non-forgeable measurements of the TCB to attest that a specific code is loaded.
+With BlindLlama, we still have to trust the **Cloud provider's hardware & hypervisor** but we deploy an auditable OS and server code which are attested using secure hardware, TPMS. We will see in [the next section](./TPMs.md) how TPMs can provide non-forgeable measurements of the TCB to attest that a specific code is loaded.
+
+> Note, this is simplified as there are many more components that are part of the stack we could have included, such as the bootloader, kernel, etc.
 
 <div style="text-align: left;">
   <a href="../hardened-environments" class="btn">Back</a>

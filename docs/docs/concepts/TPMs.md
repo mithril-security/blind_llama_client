@@ -7,30 +7,40 @@ TPMs are secure hardware components that are commonly used to securely store art
 
 Platform integrity with TPMs is achieved by storing measurements of the whole software stack of a machine, from the UEFI to the OS, which can then be verified (**attested**). We can also use TPMs to measure and attest additional arbitrary elements such as customizable items.
 
-In the case of BlindLlama, we additionally attest:
+### How does TPM attestation work in BlindLlama?
+
+**Server-side:**
+
+1. When the TPM-enabled machine used for server deployment is booted, various default measurements are taken, such as hashes of firmware, boot loaders, and critical system files. These hashes are stored in the TPM's PCRs (Platform Configuration Registers), a set of registers, or location in memory, within the TPM itself.
+
+The BlindLlama server then additionally stores hashes of the following elements in PCRs:
 
 + The **BlindLlama** inference server code
-+ The **weights** we serve
-+ The **ssl certificate** used for secure communications
++ The **model weights** we serve
++ The **TLS certificate** used for secure communications
+
+Let's take a look at the PCR values used by BlindLlama and their associated PCR number:
+
+![PCR-alloc-dark](../../assets/PCR-alloc-dark.png#only-dark)
+![PCR-alloc-light](../../assets/PCR-alloc-light.png#only-light)
+
+2. The BlindLlama server then requests a signed quote from the TPM which contains these PCR values and is signed by the TPM's Attestation Key (AK), which is derived from a tamper-proof TPM Endorsement Key (EK), and thus cannot be falsified by a third party.
+
+3. The BlindLlama server verifies that this quote is signed by the authentic and expected TPM. If, and only if, this verification is successful, the server will proceed to use the information in this signed quote to create a cryptographic proof file containing hashes from any relevant PCRs.
 
 ![proof-dark](../../assets/blindllama-proof-dark.png#only-dark)
 ![proof-light](../../assets/blindllama-proof-light.png#only-light)
 
-### How does TPM attestation work in BlindLlama?
+**Client-side:**
 
-When a TPM-enabled system is booted, various measurements are taken, such as hashes of firmware, boot loaders, and critical system files. These measurements are then stored in the TPM's PCRs (Platform Configuration Registers), a set of registers within the TPM. 
+When an end user queries our BlindLlama API, before a secure connection can be established the client will receive and verify the server's cryptographic proof file.
 
-> PCRs can be considered a log of the system state, capturing the integrity of various components during the boot process and other critical stages.
+If any of the hashes in the certificate created when deploying our server do not match with the the expected values hardcoded into our API client- an error will be raised and no user data will be sent to the server!
 
-We can then request a signed quote from the TPM which contains these PCR values and is signed by the TPM's Attestation Key (AK), which is derived from a tamper-proof TPM Endorsement Key (EK), and thus cannot be falsified by a third party. 
+**[new figure!] LAURA TODO**
 
-The BlindLlama server uses this signed quote to create a cryptographic proof file for each of our APIs, which can then be verified at any time using the `verify` method available in our Python SDK.
+By using TPMs to verify that our code and stack have not been modified or tampered with, we are able to provide robust assurances about code integrity to end users.
 
-If any of the hashes in the certificate created when deploying our server do not match with the the expected values hardcoded into our API client- an error will be raised and the end user will know this is not an authentic API built with the expected codebase on the expected stack.
-
-![verification-light](../../assets/verification-cropped.png)
-
-By enabling users to verify that our code and stack have not been modified or tampered with, we are able to provide robust assurances about code integrity to end users.
 <div style="text-align: left;">
   <a href="../TCB" class="btn">Back</a>
 </div>

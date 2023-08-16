@@ -32,7 +32,7 @@ Let's take a look at how this works step-by-step:
 
 **Client-side**:
 
-1. When the end user connects to the BlindLlama server, the client will receive the following from the server:
+When the end user connects to the BlindLlama server, the client will receive the following from the server:
   + The server's TLS certificate from the connection
   + The cryptographic proof file from the server
 
@@ -40,14 +40,12 @@ Let's take a look at how this works step-by-step:
 ![certificates-light](../../assets/certificates-light.png#only-light)
 ![certificates-dark](../../assets/certificates-dark.png#only-dark)
 
-2. This proof file which contains the hash of the server's TLS certificate is automatically verified against the certificate of the current connection. 
-3. If the TLS certificate hash in the proof file does not match a hash of the TLS certificate of the server in the current connection, the connection will fail and an error is raised.
+This proof file contains a hash of the server's TLS certificate, which is automatically verified against the certificate of the current connection. 
 
+If the TLS certificate hash in the proof file does not match a hash of the TLS certificate of the server in the current connection, the connection will fail and an error is raised.
 
 ![matching-light](../../assets/matching-light.png#only-light)
 ![matching-dark](../../assets/matching-dark.png#only-dark)
-
-
 
 <div style="text-align: left;">
   <a href="../TPMs" class="btn">Back</a>
