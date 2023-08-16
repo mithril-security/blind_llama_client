@@ -27,7 +27,7 @@ Let's take a look at how this works step-by-step:
 
 
 ![tls-hash-light](../../assets/tls-hash-light.png#only-light)
-![tls-hash-dark](../../assets/tls-hash-light.png#only-dark)
+![tls-hash-dark](../../assets/tls-hash-dark.png#only-dark)
 
 
 **Client-side**:
@@ -38,14 +38,14 @@ Let's take a look at how this works step-by-step:
 
 
 ![certificates-light](../../assets/certificates-light.png#only-light)
-![certificates-dark](../../assets/certificates-light.png#only-dark)
+![certificates-dark](../../assets/certificates-dark.png#only-dark)
 
 2. This proof file which contains the hash of the server's TLS certificate is automatically verified against the certificate of the current connection. 
 3. If the TLS certificate hash in the proof file does not match a hash of the TLS certificate of the server in the current connection, the connection will fail and an error is raised.
 
 
 ![matching-light](../../assets/matching-light.png#only-light)
-![matching-dark](../../assets/matching-light.png#only-dark)
+![matching-dark](../../assets/matching-dark.png#only-dark)
 
 
 
