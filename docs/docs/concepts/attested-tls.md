@@ -1,27 +1,26 @@
 # Attested TLS
 ________________________________________________________
 
-## What is TLS?
-
 **BlindLlama protects data in transit**, aka. when data is sent as part of end user queries or responses are returned to the end user, **using TLS**.
 
-> Transport Layer Security, or TLS, refers to a secure protocol used for host-to-host, such as client to server, communications.
-  
-  TLS keeps all data in transit between two hosts safe by encrypting it before it is sent and decrypting it after it is has been received by the other party.
+??? abstract "Learn more about TLS 📖"
+    Transport Layer Security, or TLS, refers to a secure protocol used for host-to-host, such as client to server, communications.
 
-During an initial phase known as the TLS handshake, both parties authenticate each other and exchange settings and cryptographic material for the upcoming connection. The handshake relies on asymmetric cryptography through the use of certificates. 
+    TLS keeps all data in transit between two hosts safe by encrypting it before it is sent and decrypting it after it is has been received by the other party.
 
-The main steps of the handshake are the following:
+    During an initial phase known as the TLS handshake, both parties authenticate each other and exchange settings and cryptographic material for the upcoming  connection. The handshake relies on asymmetric cryptography through the use of certificates. 
 
-1. The client sends a message to the server to initiate the connection along with a set of possible settings.
-2. The server answers with its certificate and a choice of settings among the one proposed by the server.
-3. The client verifies the identity of the server by checking it has a valid certificate (i.e. a certificate issued by a trusted Certificate Authority). It then encrypt some cryptographic material to be shared with the server with the server certificate which contains a public key. Only the server will be able to decrypt these data with its private key.
-4. When using mutual authentication, the client may also be requested to send its certificate to the server which will verify it.
-5. Both the client and server use the now shared cryptographic material to derive a unique session key. This key is used to symmetrically encrypt the rest of the communication as symmetric encryption is much faster than asymmetric encryption.
+    The main steps of the handshake are the following:
+
+    1. The client sends a message to the server to initiate the connection along with a set of possible settings.
+    2. The server answers with its certificate and a choice of settings among the one proposed by the server.
+    3. The client verifies the identity of the server by checking it has a valid certificate (i.e. a certificate issued by a trusted Certificate Authority). It then encrypt some cryptographic material to be shared with the server with the server certificate which contains a public key. Only the server will be able to decrypt these data with its private key.
+    4. When using mutual authentication, the client may also be requested to send its certificate to the server which will verify it.
+    5. Both the client and server use the now shared cryptographic material to derive a unique session key. This key is used to symmetrically encrypt the rest of the communication as symmetric encryption is much faster than asymmetric encryption.
 
 ## What is attested TLS?
 
-For BlindLLama, we not only use TLS to protect user data in transit but we use secure hardware [TPMs](./TPMs.md) to prove that the client is really talking to the authentic BlindLlama API server.
+For BlindLlama, we not only use TLS to protect user data in transit but we use secure hardware [TPMs](./TPMs.md) to prove that the client is really talking to the authentic BlindLlama API server.
 
 ### How does it work?
 
@@ -30,7 +29,7 @@ Let's take a look at how this works step-by-step:
 #### Server side
 
 1. Mithril Security deploys the API server on Mithril Cloud
-2. On deployment, the server creates a tls-terminating reverse proxy using [Caddy](https://caddyserver.com/). Caddy takes care of generating the TLS certificate required for secure communications. The client will communicate with this reverse proxy server, which will relay the inbound/outbound communications to the BlindLlama server.
+2. On deployment, the server creates a tls-terminating reverse proxy. The reverse proxy provider takes care of generating the TLS certificate required for secure communications. The client will communicate with this reverse proxy server, which will relay the inbound/outbound communications to the BlindLlama server.
 3. The caddy-generated TLS certificate is hashed by the BlindLlama server and stored in the TPM platform register PCR15. For more details about TPMs and PCRs, see our guide on [TPMs](./TPMs.md).
 4. The server generates a cryptographic proof file that includes all the hashed values stored in the TPM's PCRs. The TLS certificate is therefore included in the proof file, which is then shared with clients when they connect with the server.
 

@@ -34,14 +34,14 @@ The BlindLlama server then requests a signed quote from the TPM which contains t
 
 The BlindLlama server uses the information from this signed quote to create a cryptographic proof file containing hashes from any relevant PCRs and the quote signature.
 
-![proof-dark](../../assets/blindllama-proof-dark.png#only-dark)
-![proof-light](../../assets/blindllama-proof-light.png#only-light)
+![proof-dark](../../assets/proof-dark.png#only-dark)
+![proof-light](../../assets/proof-light.png#only-light)
 
 ### Client-side
 
 #### Verifying the proof file
 
-When an end user queries our BlindLlama API, before a secure connection can be established the client will receive and verify the server's `cryptographic proof file`. The server also sends a `cert chain` which is used to verify that information in the proof file came from a genuine TPM.
+When an end user queries our BlindLlama API, before a secure connection can be established the client will receive and verify the server's **cryptographic proof file**. The server also sends a **certificate chain** which is used to verify that information in the proof file came from a genuine TPM.
 
 Verification is done in done in two stages:
 
