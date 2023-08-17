@@ -3,13 +3,13 @@ ________________________________________________________
 
 ## What is attested TLS?
 
-Attested TLS combines the security of data in transit with [TLS](https://www.internetsociety.org/deploy360/tls/basics/) with the security and privacy of data in computation via an isolated and hardware-attested endpoint environment.
+Attested TLS combines the security of data in transit with [TLS](https://hpbn.co/transport-layer-security-tls/) with the security and privacy of data in computation via an isolated and hardware-attested endpoint environment.
 
 It has been said of TLS that:
 
-["Using encryption on the Internet is the equivalent of arranging an armored car to deliver credit-card information from someone living in a cardboard box to someone living on a park bench."](http://catless.ncl.ac.uk/Risks/19.37.html)
+*"Using encryption on the Internet is the equivalent of arranging an armored car to deliver credit-card information from someone living in a cardboard box to someone living on a park bench."* [Source here](http://catless.ncl.ac.uk/Risks/19.37.html)
 
-It is all very well to secure our data in transit with TLS when using APIs, but data is often left exposed and accessible to those with access to the endpoint environment on arrival.
+It is all very well to secure our data in transit with TLS when using APIs, but data is often left exposed and accessible once it arrives at the endpoint.
 
 Attested TLS is often deployed in the context of [Confidential Computing](https://www.fortanix.com/platform/confidential-computing-manager/what-is-confidential-computing) where a secure TLS connection is directs communications to within an attested isolated environment, or [Trusted Execution Environments](https://www.techtarget.com/searchitoperations/definition/trusted-execution-environment-TEE), which cannot be accessed or interfered with from the outside.
 
