@@ -60,9 +60,9 @@ Verification is done in done in three main stages:
 ![matching-light](../../assets/matching-light.png#only-light)
 ![matching-dark](../../assets/matching-dark.png#only-dark)
 
-### Reproducability of hashed valued
+### Reproducibility of hashed valued
 
-These checks performed by the client provide robust proofs that our hashed values were measured by a genuine vTPM and that they are the values our client is expecting, but there is a final key element in the security provided by the attestation of open-source code. This final key element is the **reproducabiily of these hashed values**, meaning the community or any interested party can audit our code, re-build our BlindLlama API and reproduce thh same hashed values relating to our stack and code, meaning they can be sure that these hashes really do relate to the open-source code we provide.
+These checks performed by the client provide robust proofs that our hashed values were measured by a genuine vTPM and that they are the values our client is expecting, but there is a final key element in the security provided by the attestation of open-source code. This final key element is the **reproducibility of hashed PCR values**, meaning the community or any interested party can audit our code, re-build our BlindLlama API and check they end up with the same hashed values relating to our stack and code in their quote from the TPM, meaning they can be sure that these hashes really do relate to the open-source code we provide.
 
 We will detail how you can do this in our [advanced security section](../advanced-security/overview.md), which is coming soon!
 

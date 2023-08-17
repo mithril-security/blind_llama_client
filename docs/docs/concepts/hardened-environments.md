@@ -1,13 +1,19 @@
 # Hardened environments
 ________________________________________________________
 
-One of the key concepts behind BlindLlama to ensure data privacy is hardened environments. The server that serves AI to users has been stripped of all possible ways to expose data to the outside, including to the admins operating such service. 
+## What are hardened environments?
 
-This means in practice that all I/O, telemetry, logs, etc. have been removed. Only users encrypted data is allowed to go inside the hardened environment. It is then decrypted inside this hardened environment, used for analysis only, and only results of the inference are allowed to leave the hardened environment These are the private, secure environments in which we deploy our APIs.
+Hardened environments are the name we give to the secure, isolated environments that the BlindLlama API is deployed within. At the heart of hardened environments is the principle that the AI/software provider (Mithril Security in the case of BlindLlama) should not have access to the environment in which the BlindLlama API is deployed, meaning we cannot manipulate or access user data.
 
-Those measures ensure that users’ data remains private, as it does not leave the hardened environment, therefore preventing any exposure to even our admins.
+Protecting data within an environment from external access and manipulation, is nothing new concept, with one of the most robust examples coming in the form of [Confidential Computing's](https://www.ibm.com/topics/confidential-computing) [Trusted Execution Environments](https://www.techtarget.com/searchitoperations/definition/trusted-execution-environment-TEE).
 
-We block service provider access to the environment so that third-parties cannot access any data being processed by our APIs.
+Let's now find out more about BlindLlama's hardened environments and we protect these environments from outside access.
+
+## How do we create hardened environments in BlindLlama?
+
+We create "hardened" environments by modifying the server image and the VM configuration on which the server image is executed to remove all possible ways to expose data to the outside, including to the admins operating such service. In practice this means that all I/O, telemetry, logs, etc. have been removed to prevent any data exposure, even to our admins.
+
+Users' data is encrypted up until it arrives in our verified hardened environment. It decrypted within the hardened environment for analysis only and only results of the inference returned to the end user are allowed to leave that environment.
 
 ![hardened-env-dark](../../assets/hardened-dark.png#only-dark)
 ![hardened-env-light](../../assets/hardened-light.png#only-light)
@@ -17,8 +23,6 @@ We also take additional security measures to make sure our environments have a h
 While serving AI models inside hardened environments is necessary, it is not sufficient to fully provide privacy guarantees to users as there is no way to prove that such data protection mechanism are in place.
 
 That is why we leverage secure hardware modules, known as TPMs, to provide cryptographic proof that such privacy controls are deployed, therefore blinding even ourselves from users’ data.
-
-We will see in the next pages how we can use TPMs to create such irrefutable proof to convince external users their data is only handled by trustworthy code. 
 
 <div style="text-align: left;">
   <a href="../overview" class="btn">Back</a>
