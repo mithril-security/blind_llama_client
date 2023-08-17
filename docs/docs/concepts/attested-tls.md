@@ -1,28 +1,23 @@
 # Attested TLS
 ________________________________________________________
 
-**BlindLlama protects data in transit**, aka. when data is sent as part of end user queries or responses are returned to the end user, **using TLS**.
-
-??? abstract "Learn more about TLS 📖"
-    Transport Layer Security, or TLS, refers to a secure protocol used for host-to-host, such as client to server, communications.
-
-    TLS keeps all data in transit between two hosts safe by encrypting it before it is sent and decrypting it after it is has been received by the other party.
-
-    During an initial phase known as the TLS handshake, both parties authenticate each other and exchange settings and cryptographic material for the upcoming  connection. The handshake relies on asymmetric cryptography through the use of certificates. 
-
-    The main steps of the handshake are the following:
-
-    1. The client sends a message to the server to initiate the connection along with a set of possible settings.
-    2. The server answers with its certificate and a choice of settings among the one proposed by the server.
-    3. The client verifies the identity of the server by checking it has a valid certificate (i.e. a certificate issued by a trusted Certificate Authority). It then encrypt some cryptographic material to be shared with the server with the server certificate which contains a public key. Only the server will be able to decrypt these data with its private key.
-    4. When using mutual authentication, the client may also be requested to send its certificate to the server which will verify it.
-    5. Both the client and server use the now shared cryptographic material to derive a unique session key. This key is used to symmetrically encrypt the rest of the communication as symmetric encryption is much faster than asymmetric encryption.
-
 ## What is attested TLS?
 
-For BlindLlama, we not only use TLS to protect user data in transit but we use secure hardware [TPMs](./TPMs.md) to prove that the client is really talking to the authentic BlindLlama API server.
+Attested TLS combines the security of data in transit with [TLS](https://www.internetsociety.org/deploy360/tls/basics/) with the security and privacy of data in computation via an isolated and hardware-attested endpoint environment.
 
-### How does it work?
+It has been said of TLS that:
+
+["Using encryption on the Internet is the equivalent of arranging an armored car to deliver credit-card information from someone living in a cardboard box to someone living on a park bench."](http://catless.ncl.ac.uk/Risks/19.37.html)
+
+It is all very well to secure our data in transit with TLS when using APIs, but data is often left exposed and accessible to those with access to the endpoint environment on arrival.
+
+Attested TLS is often deployed in the context of [Confidential Computing](https://www.fortanix.com/platform/confidential-computing-manager/what-is-confidential-computing) where a secure TLS connection is directs communications to within an attested isolated environment, or [Trusted Execution Environments](https://www.techtarget.com/searchitoperations/definition/trusted-execution-environment-TEE), which cannot be accessed or interfered with from the outside.
+
+The idea of attested TLS is to bind the server environments TLS certificate to a secure environment, so not only do we know our data is safe in transit but that it will be delivered to the expected attested secure environment and will remain protected in computation.
+
+This allows end users to have confidence that their data is protected at all times!
+
+### How does attested TLS work with BlindLlama?
 
 Let's take a look at how this works step-by-step:
 
