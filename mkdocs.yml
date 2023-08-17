@@ -121,7 +121,7 @@ nav:
 - 🔒 Advanced Security:
   - Overview: 'docs/advanced-security/overview.md'
 
-- 🛠️ API reference: 'blindllama/client.html'
+- 🛠️ API reference: 'blind_llama/client.html'
 
 # - 💫 Other projects: 
 #   - BlindBox: 'docs/past-projects/blindbox.md'
