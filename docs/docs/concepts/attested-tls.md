@@ -13,15 +13,13 @@ It is all very well to secure our data in transit with TLS when using APIs, but 
 
 Attested TLS is often deployed in the context of [Confidential Computing](https://www.fortanix.com/platform/confidential-computing-manager/what-is-confidential-computing) where a secure TLS connection is directs communications to within an attested isolated environment, or [Trusted Execution Environments](https://www.techtarget.com/searchitoperations/definition/trusted-execution-environment-TEE), which cannot be accessed or interfered with from the outside.
 
-The idea of attested TLS is to bind the server environments TLS certificate to a secure environment, so not only do we know our data is safe in transit but that it will be delivered to the expected attested secure environment and will remain protected in computation.
+By binding a TLS certificate to an attested secure environment we protect ourselves against man in the middle (MITM) attacks, as we have proof that we are communicating with our attested secure environment and not one that is merely forwarding a quote from a valid machine.
 
-This allows end users to have confidence that their data is protected at all times!
-
-### How does attested TLS work in BlindLlama?
+## How does attested TLS work in BlindLlama?
 
 Let's take a look at how we attested TLS works in BlindLlama step-by-step:
 
-#### Server side
+### Server side
 
 1. We deploy the BlindLlama server on Mithril Cloud
 2. On deployment, the server creates a tls-terminating reverse proxy. The reverse proxy provider takes care of generating the TLS certificate required for secure communications. The client will communicate with this reverse proxy server, which will relay the inbound/outbound communications to the BlindLlama server.
@@ -33,7 +31,7 @@ Let's take a look at how we attested TLS works in BlindLlama step-by-step:
 ![tls-hash-dark](../../assets/tls-hash-dark.png#only-dark)
 
 
-#### Client side
+### Client side
 
 When the end user connects to the BlindLlama server, the client will receive the following from the server:
   + The server's TLS certificate from the connection

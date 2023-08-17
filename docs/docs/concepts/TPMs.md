@@ -1,13 +1,19 @@
 # Trusted Platform Modules (TPMs)
 ________________________________________________________
 
-### Overview
+### What is a TPM?
 
-TPMs are secure hardware components that are commonly used to securely store artifacts, such as passwords and encryption keys, or to ensure the integrity of a whole software supply chain. It is the latter use case which we leverage in BlindLlama.
+TPMs are secure hardware components (usually in the form of a small chip), with built-in cryptographic capabilities and secure storage in the form of Platform Configuration Registers (PCRs). They are used to store secrets such as passwords with enhanced security since they cannot be directly accessed or tampered with by the OS. They can also be used to ensure the integrity of a whole software supply chain by storing measurements relating to the whole software stack of a machine, from the UEFI to the OS, which can then be verified (**or attested**). Note that we can similarly use TPMs to measure and attest additional arbitrary elements such as customizable items.
 
-Platform integrity with TPMs is achieved by storing measurements of the whole software stack of a machine, from the UEFI to the OS, which can then be verified (**attested**). We can also use TPMs to measure and attest additional arbitrary elements such as customizable items.
+The enhanced security and platform integrity of TPMs is leveraged and offered by all the major Cloud providers in the form of vTPMs, or virtual TPMS. Azure leverages TPMs in their [Trusted Launch](https://learn.microsoft.com/en-us/azure/virtual-machines/trusted-launch) offer, AWS with [NitroTPM & Secure Boot](https://aws.amazon.com/blogs/aws/amazon-ec2-now-supports-nitrotpm-and-uefi-secure-boot/) and Google Cloud with vTPM-compatibility provided across their [VMware Engine](https://cloud.google.com/vmware-engine/docs/vmware-ecosystem/howto-vtpm).
 
-## How does TPM attestation work in BlindLlama?
+A Virtual Trusted Platform Module (vTPM) is a software-based representation of a physical Trusted Platform Module (TPM) chip which provides all the same functions as the physical chip. The hypervisor creates a secure and isolated region of memory which replicates the isolation of a physical TPM.
+
+![tpm-vs-vtpm-light](../../assets/tpm-vs-vtpm-light.png#light-only)
+![tpm-vs-vtpm-dark](../../assets/tpm-vs-vtpm-dark.png#dark-only)
+
+
+## How do we use TPMs in BlindLlama?
 
 ### Server-side
 
