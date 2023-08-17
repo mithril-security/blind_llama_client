@@ -62,7 +62,7 @@ Verification is done in done in three main stages:
 
 ### Reproducability of hashed valued
 
-These checks performed by the client provide robust proofs that our hashed values were measured by a genuine vTPM and that they are the values our client is expecting, but there is a final key element in the security provided by the attestation of open-source code. This final key element is the **reproducabiily of these hashed values**, meaning the community or any interested party can audit our code and stack, reproduce the hashed values relating to our stack and code and check these match against the hashed values our BlindLlama server.
+These checks performed by the client provide robust proofs that our hashed values were measured by a genuine vTPM and that they are the values our client is expecting, but there is a final key element in the security provided by the attestation of open-source code. This final key element is the **reproducabiily of these hashed values**, meaning the community or any interested party can audit our code, re-build our BlindLlama API and reproduce thh same hashed values relating to our stack and code, meaning they can be sure that these hashes really do relate to the open-source code we provide.
 
 We will detail how you can do this in our [advanced security section](../advanced-security/overview.md), which is coming soon!
 
