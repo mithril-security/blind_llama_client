@@ -17,13 +17,13 @@ The idea of attested TLS is to bind the server environments TLS certificate to a
 
 This allows end users to have confidence that their data is protected at all times!
 
-### How does attested TLS work with BlindLlama?
+### How does attested TLS work in BlindLlama?
 
-Let's take a look at how this works step-by-step:
+Let's take a look at how we attested TLS works in BlindLlama step-by-step:
 
 #### Server side
 
-1. Mithril Security deploys the API server on Mithril Cloud
+1. We deploy the BlindLlama server on Mithril Cloud
 2. On deployment, the server creates a tls-terminating reverse proxy. The reverse proxy provider takes care of generating the TLS certificate required for secure communications. The client will communicate with this reverse proxy server, which will relay the inbound/outbound communications to the BlindLlama server.
 3. The caddy-generated TLS certificate is hashed by the BlindLlama server and stored in the TPM platform register PCR15. For more details about TPMs and PCRs, see our guide on [TPMs](./TPMs.md).
 4. The server generates a cryptographic proof file that includes all the hashed values stored in the TPM's PCRs. The TLS certificate is therefore included in the proof file, which is then shared with clients when they connect with the server.
