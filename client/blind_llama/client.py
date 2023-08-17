@@ -4,8 +4,8 @@ from .errors import *
 
 from grpc import ssl_channel_credentials
 
-import blindllama.pb.licensing_pb2 as licensing_pb2
-import blindllama.pb.licensing_pb2_grpc as licensing_pb2_grpc
+import blind_llama.pb.licensing_pb2 as licensing_pb2
+import blind_llama.pb.licensing_pb2_grpc as licensing_pb2_grpc
 
 import os
 import grpc
@@ -36,7 +36,7 @@ class Client():
         """Connect to the BlindLlama service.
         You needs to provide an API key in order to use the service. 
         Args:
-            api_key (str): The API key to use the service. Default to None.
+            api_key (str): The API key to use the service. You can either specify an API key here or use the variable environment BLIND_LLAMA_API_KEY. If you specified an API key using the variable environment BLIND_LLAMA_API_KEY, the argument api_key will be ignored. You can get one API key on https://cloud.mithrilsecurity.io/. Default to None.
         Returns:
         """
 
@@ -45,9 +45,10 @@ class Client():
                 ssl_channel_credentials(),
             )
 
+        api_key_env = os.getenv("BLIND_LLAMA_API_KEY", "")
         stub = licensing_pb2_grpc.LicensingServiceStub(channel)
         try:
-            enclave_request = licensing_pb2.GetEnclaveRequest(api_key=api_key)
+            enclave_request = licensing_pb2.GetEnclaveRequest(api_key=api_key_env if len(api_key_env) > 0 else api_key)
             response = stub.GetEnclave(enclave_request)
         except grpc.RpcError as rpc_error:
             raise APIKeyException(api_key, rpc_error.details())
@@ -98,7 +99,8 @@ class Client():
 def connect(api_key: str = "") -> Client:
     """Connect to the BlindLlama service.
     Args:
-        api_key (str): The API key to use the service. Default to None.
+            api_key (str): The API key to use the service. You can either specify an API key here or use the variable environment BLIND_LLAMA_API_KEY. If you specified an API key using the variable environment BLIND_LLAMA_API_KEY, the argument api_key will be ignored. You can get one API key on https://cloud.mithrilsecurity.io/. Default to None.
+   
     Returns:
         Client: A connection to the BlindLlama service.
     """
