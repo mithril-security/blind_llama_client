@@ -1,12 +1,14 @@
 # Overview
 ________________________________________________________
 
-In this `concepts` section, we will describe the key concepts that are at the core of BlindLlama:
+In this `concepts` section, we will describe the key concepts that are at the core of BlindLlama. Each section contains an introduction to the concept itself followed by a discussion of how we use these technologies in BlindLlama.
 
-+ [**Hardened environments**](./hardened-environments.md): We describe how we harden our AI inference server to remove data exposure even to our admins
-+ [**Trusted Computing Base (TCB)**](./TCB.md): We detail the trusted and verified components in our APIs
-+ [**Trusted Platform Modules (TPMs)**](./TPMs.md): We explain how we use TPMs to provide cryptographic proof to outsiders that those controls are in place
-+ [**Attested TLS**](./TPMs.md): We describe how we secure communications with our APIs
+The concepts we will cover are:
+
++ [**Hardened environments**](./hardened-environments.md): We describe how we harden the BLindLlama server to eliminate data exposure, even to our admins
++ [**Trusted Computing Base (TCB)**](./TCB.md): We detail which elements of our computing base are trusted or attested
++ [**Trusted Platform Modules (TPMs)**](./TPMs.md): We explain how we use TPMs to provide cryptographic proof that our privacy and security measures are in place
++ [**Attested TLS**](./TPMs.md): We describe how we combine secure communications with attested hardened environments to provide robust end-to-end data protection and prove we are really communicating with our hardened environment
 
 <div style="text-align: right;">
   <a href="../hardened-environments" class="btn">Next</a>
