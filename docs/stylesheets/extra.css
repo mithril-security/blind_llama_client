@@ -128,6 +128,8 @@
 img[alt=tcb-light] { max-width: 600px; display: block; margin-left: auto; margin-right: auto;}
 img[alt=PCR-alloc-dark] { max-width: 400px;}
 img[alt=PCR-alloc-light] { max-width: 400px;}
+img[alt=PCR-alloc-dark-extra] { max-width: 400px;}
+img[alt=PCR-alloc-light-extra] { max-width: 400px;}
 img[alt=tcb-dark] { max-width: 600px; display: block; margin-left: auto !important; margin-right: auto !important;}
 img[alt=trust-model-light] { max-width: 600px; display: block; margin-left: auto; margin-right: auto;}
 img[alt=trust-model-dark] { max-width: 600px; display: block; margin-left: auto; margin-right: auto;}
