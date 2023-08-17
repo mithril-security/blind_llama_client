@@ -3,7 +3,7 @@ ________________________________________________________
 
 ## What is attested TLS?
 
-Attested TLS combines the security of data in transit with [TLS](https://www.internetsociety.org/deploy360/tls/basics/) with the security and privacy of data in computation via an isolated and hardware-attested endpoint environment.
+Attested TLS combines the security of data in transit with [TLS](https://hpbn.co/transport-layer-security-tls/) with the security and privacy of data in computation via an isolated and hardware-attested endpoint environment.
 
 It has been said of TLS that:
 
