@@ -9,8 +9,8 @@ The enhanced security and platform integrity of TPMs is leveraged and offered by
 
 A Virtual Trusted Platform Module (vTPM) is a software-based representation of a physical Trusted Platform Module (TPM) chip which provides all the same functions as the physical chip. The hypervisor creates a secure and isolated region of memory which replicates the isolation of a physical TPM.
 
-![tpm-vs-vtpm-light](../../assets/tpm-vs-vtpm-light.png#light-only)
-![tpm-vs-vtpm-dark](../../assets/tpm-vs-vtpm-dark.png#dark-only)
+![tpm-vs-vtpm-light](../../assets/tpm-vs-vtpm-light.png#only-light)
+![tpm-vs-vtpm-dark](../../assets/tpm-vs-vtpm-dark.png#only-dark)
 
 
 ## How do we use TPMs in BlindLlama?
