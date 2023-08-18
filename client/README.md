@@ -117,8 +117,7 @@ For privacy-demanding users that require more technical guarantees, they often c
 
 With BlindLlama, we remove the AI provider from the list of trusted parties. When models are served with BlindLlama, users' data cannot be seen by the AI provider because we use a Zero-trust AI infrastructure that removes the service/AI provider from the trust base. We can prove such controls are in place using [TPM-based attestation](./docs/docs/concepts/TPMs.md).
 
-![trust-model-light](./docs/assets/trust-model-light.png#only-light)
-![trust-model-dark](./docs/assets/trust-model-dark.png#only-dark)
+![trust-model-dark](./docs/assets/trust-model-dark.png)
 
 ## 👩🏻‍💻 Use cases
 
