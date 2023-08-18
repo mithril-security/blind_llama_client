@@ -3,9 +3,9 @@ ________________________________________________________
 
 ## What is the TCB?
 
-Normally, when you run an application on a machine, you need to trust multiple elements: from the hardware of the machine you deploy your application on, to the the application itself, through the operating system, hypervisor, etc. This doesn't mean we "trust" them in the everyday sense of the word- this means that our application could be affected by a bug or vulnerability in these elements! 
+Normally, when you run an application on a machine, you need to trust multiple elements: from the hardware of the machine you deploy your application on, to the application itself, through the operating system, hypervisor, etc. This doesn't mean we "trust" them in the everyday sense of the word- this means that our application could be affected by a bug or vulnerability in these elements! 
 
-These trusted elements makes up what we call the **Trusted Computing Base** or **TCB** of our application.
+These trusted elements make up what we call the **Trusted Computing Base** or **TCB** of our application.
 
 With a typical AI API, the Cloud provider buys the **hardware** and provides a VM with a particular **OS** through a **hypervisor** to the AI API provider, who deploys **their server code and model weights** on that VM.
 

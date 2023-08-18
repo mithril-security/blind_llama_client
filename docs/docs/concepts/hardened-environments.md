@@ -5,7 +5,7 @@ ________________________________________________________
 
 Hardened environments are the name we give to the secure, isolated environments that the BlindLlama API is deployed within. At the heart of hardened environments is the principle that the AI/software provider (Mithril Security in the case of BlindLlama) should not have access to the environment in which the BlindLlama API is deployed, meaning we cannot manipulate or access user data.
 
-Protecting data within an environment from external access and manipulation, is nothing new concept, with one of the most robust examples coming in the form of [Confidential Computing's](https://www.ibm.com/topics/confidential-computing) [Trusted Execution Environments](https://www.techtarget.com/searchitoperations/definition/trusted-execution-environment-TEE).
+Protecting data within an environment from external access and manipulation, is not a new concept, with one of the most robust examples coming in the form of [Confidential Computing's](https://www.ibm.com/topics/confidential-computing) [Trusted Execution Environments](https://www.techtarget.com/searchitoperations/definition/trusted-execution-environment-TEE).
 
 Let's now find out more about BlindLlama's hardened environments and we protect these environments from outside access.
 
@@ -13,7 +13,7 @@ Let's now find out more about BlindLlama's hardened environments and we protect 
 
 We create "hardened" environments by modifying the server image and the VM configuration on which the server image is executed to remove all possible ways to expose data to the outside, including to the admins operating such service. In practice this means that all I/O, telemetry, logs, etc. have been removed to prevent any data exposure, even to our admins.
 
-Users' data is encrypted up until it arrives in our verified hardened environment. It decrypted within the hardened environment for analysis only and only results of the inference returned to the end user are allowed to leave that environment.
+Users' data is encrypted up until it arrives in our verified hardened environment. It is decrypted within the hardened environment for analysis only and only results of the inference returned to the end user are allowed to leave that environment.
 
 ![hardened-env-dark](../../assets/hardened-dark.png#only-dark)
 ![hardened-env-light](../../assets/hardened-light.png#only-light)
