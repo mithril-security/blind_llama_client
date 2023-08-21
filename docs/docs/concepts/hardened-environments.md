@@ -11,7 +11,7 @@ Let's now find out more about BlindLlama's hardened environments and we protect 
 
 ## How do we create hardened environments in BlindLlama?
 
-We create "hardened" environments by modifying the server image and the VM configuration on which the server image is executed to remove all possible ways to expose data to the outside, including to the admins operating such service. In practice this means that all I/O, telemetry, logs, etc. have been removed to prevent any data exposure, even to our admins.
+We create "hardened" environments by modifying the server image and the VM configuration on which the server image is executed to remove all possible ways to expose data to the outside, including to the admins operating the service. In practice, this means that all I/O, telemetry, logs, etc. have been removed to prevent any data exposure, even to our admins.
 
 Users' data is encrypted up until it arrives in our verified hardened environment. It is decrypted within the hardened environment for analysis only and only results of the inference returned to the end user are allowed to leave that environment.
 

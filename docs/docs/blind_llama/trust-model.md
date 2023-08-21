@@ -11,7 +11,7 @@ In the case of an AI provider serving an AI API to end users on a Cloud infrastr
 
 + **The AI provider**: they provide the software application that is in charge of applying AI models to users’ data.
 
-+ **The Cloud provider**: they provide the infrastructure, Hypervisor, VMs, OS, to the AI provider.
++ **The Cloud provider**: they provide the infrastructure, Hypervisor, VMs and OS, to the AI provider.
 
 + **The hardware providers**: they provide the lowest physical components, CPU, GPU, TPMs, etc. to the Cloud provider who then manages those to resell infrastructure to the AI providers. 
 

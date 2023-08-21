@@ -19,7 +19,7 @@ A Virtual Trusted Platform Module (vTPM) is a software-based representation of a
 
 #### Measuring the software stack
 
-When the TPM-enabled machine used for server deployment is booted, various default measurements are taken, such as hashes of firmware, boot loaders, and critical system files. These hashes are stored in the TPM's PCRs (Platform Configuration Registers), a set of registers, or location in memory, within the TPM itself.
+When the TPM-enabled machine used for server deployment is booted, various default measurements are taken, such as hashes of firmware, boot loaders, and critical system files. These hashes are stored in the TPM's PCRs (Platform Configuration Registers), a set of registers, or locations in memory, within the TPM itself.
 
 ![PCR-alloc-dark](../../assets/PCR-alloc-dark.png#only-dark)
 ![PCR-alloc-light](../../assets/pcr-alloc-light.png#only-light)

@@ -12,7 +12,9 @@ ________________________________________________________
 
 🛠️ **BlindLlama** makes it easy to use open-source LLMs by using **Zero-trust AI APIs** that abstract all the complexity of model deployment while ensuring **users’ data is never exposed** to us thanks to end-to-end protection with **secure hardware**.
 
-🔐 To provide guarantees to developers that data sent to our managed infrastructure is not exposed, we have developed a **Zero-trust architecture to serve AI models**. 
+🔐 To provide guarantees to developers that data sent to our managed infrastructure is not exposed, we have developed a **Zero-trust architecture to serve AI models**.
+
+> We currently serve [Llama2](https://ai.meta.com/llama/) but will be making more open-source models available in the near future!
 
 Our backend has two key properties:
 
