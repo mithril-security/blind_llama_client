@@ -21,7 +21,7 @@ A Virtual Trusted Platform Module (vTPM) is a software-based representation of a
 
 When the TPM-enabled machine used for server deployment is booted, various default measurements are taken, such as hashes of firmware, boot loaders, and critical system files. These hashes are stored in the TPM's PCRs (Platform Configuration Registers), a set of registers, or location in memory, within the TPM itself.
 
-![PCR-alloc-dark](../../assets/pcr-alloc-dark.png#only-dark)
+![PCR-alloc-dark](../../assets/PCR-alloc-dark.png#only-dark)
 ![PCR-alloc-light](../../assets/pcr-alloc-light.png#only-light)
 
 The BlindLlama server then additionally stores hashes of the following elements in PCRs:
@@ -30,7 +30,7 @@ The BlindLlama server then additionally stores hashes of the following elements 
 + The **model weights** we serve
 + The **TLS certificate** used for secure communications
 
-![PCR-alloc-extra-dark](../../assets/pcr-alloc-extra-dark.png#only-dark)
+![PCR-alloc-extra-dark](../../assets/PCR-alloc-extra-dark.png#only-dark)
 ![PCR-alloc-extra-light](../../assets/pcr-alloc-extra-light.png#only-light)
 
 #### Collecting PCR values
