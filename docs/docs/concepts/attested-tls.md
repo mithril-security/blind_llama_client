@@ -13,7 +13,7 @@ It is all very well to secure our data in transit with TLS when using APIs, but 
 
 Attested TLS is often deployed in the context of [Confidential Computing](https://www.fortanix.com/platform/confidential-computing-manager/what-is-confidential-computing) where a secure TLS connection is directs communications to within an attested isolated environment, or [Trusted Execution Environments](https://www.techtarget.com/searchitoperations/definition/trusted-execution-environment-TEE), which cannot be accessed or interfered with from the outside.
 
-By binding a TLS certificate to an attested secure environment we protect ourselves against man in the middle (MITM) attacks, as we have proof that we are communicating with our attested secure environment and not one that is merely forwarding a quote from a valid machine.
+By binding a TLS certificate to an attested secure environment we protect ourselves against man-in-the-middle (MITM) attacks, as we have proof that we are communicating with our attested secure environment and not one that is merely forwarding a quote from a valid machine.
 
 ## How does attested TLS work in BlindLlama?
 
@@ -43,7 +43,7 @@ When the end user connects to the BlindLlama server, the client will receive the
 
 This proof file contains a hash of the server's TLS certificate, which is automatically verified against the certificate of the current connection. 
 
-If the TLS certificate hash in the proof file does not match a hash of the TLS certificate of the server in the current connection, the connection will fail and an error is raised.
+If the TLS certificate hash in the proof file does not match the hash of the TLS certificate of the server in the current connection, the connection will fail and an error is raised.
 
 ![matching-light](../../assets/matching-light.png#only-light)
 ![matching-dark](../../assets/matching-dark.png#only-dark)
