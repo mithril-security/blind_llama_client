@@ -31,7 +31,14 @@ Now you can start playing with our privacy-friendly Llama 2 model:
 ```python
 import blind_llama
 
-blind_llama.run("llama-2-7B", input={"prompt": "Write me a poem"}) 
+# connect to the BlindLLama server using your API key
+client = blind_llama.connect("<YOUR_API_KEY>")
+
+# use predict method to query the Llama2 model with a prompt of your choice
+ret = client.predict("Can you explain to me briefly what is Python programming language?")
+
+# print the results
+print(ret)
 ```
 
 ### Security
@@ -40,7 +47,7 @@ What we showed you most likely did not impress you and what we provide does not 
 
 However a lot happen with this line: 
 ```python
-blind_llama.run("llama-2-7B", input={"prompt": "Write me a poem"}) 
+client = blind_llama.connect("<YOUR_API_KEY>")
 ```
 
 Indeed, as we will see, our Python SDK first attests that we are talking to a server that necessarily analyzes data without exposing it to the admins of the service. 
