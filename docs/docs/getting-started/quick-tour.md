@@ -16,13 +16,9 @@ First, we need to install BlindLlama open-source Python client:
 pip install blind_llama
 ```
 
-### Authenticate
+### Get your access token
 
-Then, you will need to provide a token. You can get one on our [Mithril Cloud](https://cloud.mithrilsecurity.io/) to get started for free. It that can then be set in as an environment variable:
-
-```bash
-export BLIND_LLAMA_API_KEY=<YOUR_API_KEY>
-```
+Then, you will need to provide a token. You can get one on our [Mithril Cloud](https://cloud.mithrilsecurity.io/) to get started for free.
 
 ### Run
 
@@ -31,19 +27,26 @@ Now you can start playing with our privacy-friendly Llama 2 model:
 ```python
 import blind_llama
 
-blind_llama.run("llama-2-7B", input={"prompt": "Write me a poem"}) 
+# connect to the BlindLLama server using your API key
+client = blind_llama.connect("<YOUR_API_KEY>")
+
+# use predict method to query the Llama2 model with a prompt of your choice
+ret = client.predict("Can you explain to me briefly what is Python programming language?")
+
+# print the results
+print(ret)
 ```
 
 ### Security
 
-What we showed you most likely did not impress you and what we provide does not look different from other AI APIs provider. 
+What we showed you may not look different from other AI APIs provider. 
 
-However a lot happen with this line: 
+But a lot is happening under the hood with this line to ensure your data will be kept confiential when querying the Llama2 model: 
 ```python
-blind_llama.run("llama-2-7B", input={"prompt": "Write me a poem"}) 
+client = blind_llama.connect("<YOUR_API_KEY>")
 ```
 
-Indeed, as we will see, our Python SDK first attests that we are talking to a server that necessarily analyzes data without exposing it to the admins of the service. 
+As we will see in depth in further sections, our Python SDK first attests that we are talking to a server that analyzes data without exposing it to the admins of the service. 
 
 This is done thanks to two things:
 
