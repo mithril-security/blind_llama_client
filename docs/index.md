@@ -59,7 +59,7 @@ BlindLlama virtually provides the same level of security, privacy, and control a
 ## 🚀 Getting started
 ________________________________________________________
 
-- Check out our [Quick tour](./docs/getting-started/quick-tour.md), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
+- Check out our [Quick tour](./docs/getting-started/quick-tour.ipynb), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
 - Find out more about [How we protect your data](./docs/getting-started/how-we-protect-your-data.md)
 - Discover the [architecture](./docs/blind_llama/architecture.md) and [trust model](./docs/blind_llama/trust-model.md) behind BlindLlama.
  
