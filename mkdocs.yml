@@ -105,7 +105,7 @@ nav:
   - Trust model: './docs/blind_llama/trust-model.md'
 
 - 🚀 Getting Started: 
-  - Quick tour: 'docs/getting-started/quick-tour.md'
+  - Quick tour: 'docs/getting-started/quick-tour.ipynb'
   - How we protect your data: 'docs/getting-started/how-we-protect-your-data.md'
 
 # - 📚 Integrations:
