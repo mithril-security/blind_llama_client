@@ -55,5 +55,5 @@ As detailed [in the previous section](./TPMs.md), the proof file also contains h
 </div>
 
 <div style="text-align: right;">
-  <a href="https://blindllama.readthedocs.io/en/latest/" class="btn">Home</a>
+  <a href="https://blindllama.mithrilsecurity.io/en/latest/" class="btn">Home</a>
 </div>
