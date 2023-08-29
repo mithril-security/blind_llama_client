@@ -124,6 +124,13 @@
 	margin-right: 0;
 }
 
+.md-header__button.md-logo :is(img, svg) {
+	fill: currentcolor;
+	display: block;
+	height: 39.0167px;
+	width: auto;
+  }
+
 /******* max width for large images *******/
 
 @media screen and (min-width: 350px) {

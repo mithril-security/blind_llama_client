@@ -22,8 +22,8 @@ theme:
     - navigation.indexes
     - navigation.expand
     
-  logo: assets/logo.png
-  favicon: assets/logo.png
+  logo: "https://uploads-ssl.webflow.com/6391c9c43e45c45a622f4763/63b282241e34a7191fcfaaf4_logo.svg"
+  favicon: "https://uploads-ssl.webflow.com/6391c9c43e45c45a622f4763/63b282241e34a7191fcfaaf4_logo.svg"
   palette:
     - scheme: slate
       toggle:
