@@ -149,10 +149,10 @@ BlindLlama virtually provides the same level of security, privacy, and control a
 
 ## 🚀 Getting started
 
-- Check out our [Quick tour](https://blindllama.readthedocs.io/en/latest/docs/getting-started/quick-tour/), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
-- Find out more about [How we protect your data](https://blindllama.readthedocs.io/en/latest/docs/getting-started/how-we-protect-your-data/)
-- Refer to our [Concepts](https://blindllama.readthedocs.io/en/latest/docs/getting-started/concepts/) guide for more information on key concepts
-- Learn more about BlindLlama's design with our [BlindLlama 101](https://blindllama.readthedocs.io/en/latest/docs/getting-started/blindllama-101/) guide
+- Check out our [Quick tour](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/quick-tour/), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
+- Find out more about [How we protect your data](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/how-we-protect-your-data/)
+- Refer to our [Concepts](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/concepts/) guide for more information on key concepts
+- Learn more about BlindLlama's design with our [BlindLlama 101](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/blindllama-101/) guide
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -227,7 +227,7 @@ BlindLlama builds on the foundations of BlindAI but provides much faster perform
 [twitter-url]: https://twitter.com/MithrilSecurity
 [contact-url]: https://www.mithrilsecurity.io/contact
 [docs-shield]: https://img.shields.io/badge/Docs-000000?style=for-the-badge&colorB=555
-[docs-url]: https://blindllama.readthedocs.io/en/latest/
+[docs-url]: https://blindllama.mithrilsecurity.io/en/latest/
 [license-shield]: https://img.shields.io/github/license/mithril-security/aicert.svg?style=for-the-badge
 [contact]: https://img.shields.io/badge/Contact_us-000000?style=for-the-badge&colorB=555
 [project]: https://img.shields.io/badge/Project-000000?style=for-the-badge&colorB=555
@@ -236,7 +236,7 @@ BlindLlama builds on the foundations of BlindAI but provides much faster perform
 [twitter]: https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white
 [linkedin-url]: https://www.linkedin.com/company/mithril-security-company/
 [website-url]: https://www.mithrilsecurity.io
-[docs-url]: https://blindllama.readthedocs.io/en/latest/
+[docs-url]: https://blindllama.mithrilsecurity.io/en/latest/
 [website-shield]: https://img.shields.io/badge/website-000000?style=for-the-badge&colorB=555
 [blog-url]: https://blog.mithrilsecurity.io/
 [blog-shield]: https://img.shields.io/badge/Blog-000?style=for-the-badge&logo=ghost&logoColor=yellow&colorB=555
