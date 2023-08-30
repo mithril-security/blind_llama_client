@@ -3,13 +3,9 @@ ________________________________________________________
 
 ## What is attested TLS?
 
-Attested TLS combines the security of data in transit with [TLS](https://hpbn.co/transport-layer-security-tls/) with the security and privacy of data in computation via an isolated and hardware-attested endpoint environment.
+Attested TLS combines the security of data in transit with [TLS](https://hpbn.co/transport-layer-security-tls/) with a proof of the identity of the server, which in our case is part of a verified hardened system.	
 
-It has been said of TLS that:
-
-*"Using encryption on the Internet is the equivalent of arranging an armored car to deliver credit-card information from someone living in a cardboard box to someone living on a park bench."* [Source here](http://catless.ncl.ac.uk/Risks/19.37.html)
-
-It is all very well to secure our data in transit with TLS when using APIs, but data is often left exposed and accessible once it arrives at the endpoint.
+In comparison, regular TLS only prevents outside parties from knowing users’ information when it is transit to the AI provider. It does not protect data from the AI provider itself on arrival at the endpoint.
 
 Attested TLS is often deployed in the context of [Confidential Computing](https://www.fortanix.com/platform/confidential-computing-manager/what-is-confidential-computing) where a secure TLS connection is directs communications to within an attested isolated environment, or [Trusted Execution Environments](https://www.techtarget.com/searchitoperations/definition/trusted-execution-environment-TEE), which cannot be accessed or interfered with from the outside.
 
@@ -22,9 +18,9 @@ Let's take a look at how we attested TLS works in BlindLlama step-by-step:
 ### Server side
 
 1. We deploy the BlindLlama server on Mithril Cloud
-2. On deployment, the server creates a tls-terminating reverse proxy. The reverse proxy provider takes care of generating the TLS certificate required for secure communications. The client will communicate with this reverse proxy server, which will relay the inbound/outbound communications to the BlindLlama server.
-3. The caddy-generated TLS certificate is hashed by the BlindLlama server and stored in the TPM platform register PCR15. For more details about TPMs and PCRs, see our guide on [TPMs](./TPMs.md).
-4. The server generates a cryptographic proof file that includes all the hashed values stored in the TPM's PCRs. The TLS certificate is therefore included in the proof file, which is then shared with clients when they connect with the server.
+2. On deployment, the server creates a tls-terminating reverse proxy. The reverse proxy provider takes care of generating the TLS certificate required for secure communications. Since this is done within our hardened isolated environment, it remains protected and is not accessible even to our admins. The client will communicate with this reverse proxy server, which will relay the inbound/outbound communications to the BlindLlama server.
+3. The TLS certificate is hashed by the BlindLlama server and stored in the TPM platform register PCR15. For more details about TPMs and PCRs, see our guide on [TPMs](./TPMs.md).
+4. The TLS certificate is hashed and included in a cryptographic proof file, which is then shared with clients when they connect with the server for verification.
 
 
 ![tls-hash-light](../../assets/tls-hash-light.png#only-light)
@@ -33,17 +29,19 @@ Let's take a look at how we attested TLS works in BlindLlama step-by-step:
 
 ### Client side
 
-When the end user connects to the BlindLlama server, the client will receive the following from the server:
+When the end user connects to the BlindLlama server, the client will receive the following assets from the server:
   + The server's TLS certificate from the connection
   + The cryptographic proof file from the server
-
+  + A certificate chain used to verify the TPM's signature.
 
 ![certificates-light](../../assets/certificates-light.png#only-light)
 ![certificates-dark](../../assets/certificates-dark.png#only-dark)
 
-This proof file contains a hash of the server's TLS certificate, which is automatically verified against the certificate of the current connection. 
+This proof file contains a hash of the server's TLS certificate, which is automatically verified against the TLS certificate of the current connection. 
 
 If the TLS certificate hash in the proof file does not match the hash of the TLS certificate of the server in the current connection, the connection will fail and an error is raised.
+
+This prevents man-in-the-middle attacks. If a malicious server were to intercept and forward the expected proof file, we would still be alerted to the fact that the server we are communicating with does not have the expected TLS certificate hash, and communications with this server would end there.
 
 ![matching-light](../../assets/matching-light.png#only-light)
 ![matching-dark](../../assets/matching-dark.png#only-dark)

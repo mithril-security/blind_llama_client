@@ -3,11 +3,15 @@ ________________________________________________________
 
 ### What is a TPM?
 
-TPMs are secure hardware components (usually in the form of a small chip), with built-in cryptographic capabilities and secure storage in the form of Platform Configuration Registers (PCRs). They are used to store secrets such as passwords with enhanced security since they cannot be directly accessed or tampered with by the OS. They can also be used to ensure the integrity of a whole software supply chain by storing measurements relating to the whole software stack of a machine, from the UEFI to the OS, which can then be verified (**or attested**). Note that we can similarly use TPMs to measure and attest additional arbitrary elements such as customizable items.
+TPMs are secure hardware components (usually in the form of a small chip), with built-in cryptographic capabilities and secure storage in the form of Platform Configuration Registers (PCRs). They are generally used to protect secrets such as encryption keys with enhanced security since they cannot be directly accessed or tampered with by the OS. 
+
+In our case, we make use of the TPMs to ensure the integrity of a whole software stack by measuring each component, from the UEFI to the OS, which can then be verified (or **attested**).
+
+In addition, we also use TPMs to measure and attest additional data such as the server code and model weights.
 
 The enhanced security and platform integrity of TPMs is leveraged and offered by all the major Cloud providers in the form of vTPMs, or virtual TPMS. Azure leverages TPMs in their [Trusted Launch](https://learn.microsoft.com/en-us/azure/virtual-machines/trusted-launch) offer, AWS with [NitroTPM & Secure Boot](https://aws.amazon.com/blogs/aws/amazon-ec2-now-supports-nitrotpm-and-uefi-secure-boot/) and Google Cloud with vTPM-compatibility provided across their [VMware Engine](https://cloud.google.com/vmware-engine/docs/vmware-ecosystem/howto-vtpm).
 
-A Virtual Trusted Platform Module (vTPM) is a software-based representation of a physical Trusted Platform Module (TPM) chip which provides all the same functions as the physical chip. The hypervisor creates a secure and isolated region of memory which replicates the isolation of a physical TPM.
+A virtual Trusted Platform Module (vTPM) is a software-based implementation of a physical Trusted Platform Module (TPM) chip which provides all the same functions as the physical chip. The hypervisor creates a secure and isolated region of memory which replicates the isolation of a physical TPM.
 
 ![tpm-vs-vtpm-light](../../assets/tpm-vs-vtpm-light.png#only-light)
 ![tpm-vs-vtpm-dark](../../assets/tpm-vs-vtpm-dark.png#only-dark)
@@ -15,7 +19,9 @@ A Virtual Trusted Platform Module (vTPM) is a software-based representation of a
 
 ## How do we use TPMs in BlindLlama?
 
-### Server-side
+BlindLlama achieves confidentiality of data by first hardening our AI server, i.e. having it reviewed to ensure it is not leaking data, and then proving such a hardened server is actually used by verifying the expected server is loaded. 
+
+### Server side
 
 #### Measuring the software stack
 
@@ -35,40 +41,55 @@ The BlindLlama server then additionally stores hashes of the following elements 
 
 #### Collecting PCR values
 
-The BlindLlama server then requests a signed quote from the TPM which contains these PCR values and is signed by the TPM's Attestation Key (AK), which is derived from a tamper-proof TPM Endorsement Key (EK), and thus cannot be falsified by a third party. The AK never leaves our hardened environment and therefore cannot be accessed, even by admins at Mithril Security.
+The BlindLlama server then requests a signed quote from the TPM which contains these PCR values and is signed by the TPM's Attestation Key (AK). The AK never leaves the TPM and therefore cannot be accessed, even by our admins.
 
 #### Creating proof file
 
-The BlindLlama server includes this quote in a standardized cryptographic proof file, containing hashes from the PCRs and the TPM's quote signature.
+The BlindLlama server includes this TPM's quote in a cryptographic proof file, which also contains a certificate chain used to verify the TPM quote's signature and the server's TLS certificate.
 
 ![proof-dark](../../assets/proof-dark.png#only-dark)
 ![proof-light](../../assets/proof-light.png#only-light)
 
-### Client-side
+### Client side
 
 #### Verifying the proof file
 
-When an end user queries our BlindLlama API, before a secure connection can be established the client will receive and verify the server's **cryptographic proof file**, which includes the TPM's quote signed by the private AK. The server also sends a [cert chain](https://www.ibm.com/docs/en/ztpf/1.1.0.15?topic=ca-certificate-chain-verification), a chain of certificates from the public AK to the cloud provider's root of trust.
+When an end user queries our BlindLlama API, before a secure connection can be established with the server, the client will receive and verify the server's **cryptographic proof file**, which contains **the TPM's quote** signed by the private AK. 
 
-Verification is done in done in three main stages:
+The client also receives a [cert chain](https://www.ibm.com/docs/en/ztpf/1.1.0.15?topic=ca-certificate-chain-verification), a chain of certificates, which is used to verify the TPM quote’s signature.
 
-**Step one:** Firstly, the client checks the public AK using the certificate chain. The certificate chain binds the public AK to the cloud provider's **root of trust**, which enables us to have confidence in our public AK as we have proof it was generated by the cloud provider.
+Verification is done in done in three steps:
+
+**Step one:** The client validates the AK using the certificate chain. This certificate chain is issued by the Cloud provider* and is evidence that the key really is the Attestation Key of one of their TPMs.
 
 ![chain-dark](../../assets/chain-dark.png#only-dark)
 ![chain-light](../../assets/chain-light.png#only-light)
 
-**Step two:**  Now that we have proof that our public AK is authentic, the client uses it to verify the TPM's private AK signature in our cryptographic proof file. This allows us to have confidence that the quote contained within our proof file has been signed by a genuine vTPM.
+**Step two:** Now we have validated the AK, we use the public part of this key to check the TPM's quote's signature. This allows us to have confidence in the authenticity of the TPM quote contained within our proof file.
 
-**Step three:**  Once we have established that our proof file is signed by a genuine vTPM, each of the hashes in the proof file are checked against expected values hardcoded into the client. If any of these hashes does not match with the expected hash, an error will be raised!
+**Step three:**  Once we have established that the TPM quote is authentic, the client recreates the quote's hash values and verifies that they match the values in quote. If any of these hashes do not match with the quote's corresponding hash, an error will be raised!
 
 ![hash-check-dark](../../assets/hash-check-dark.png#only-dark)
 ![hash-check-light](../../assets/hash-check-light.png#only-light)
 
-### Reproducibility of hashed values
+* ⚠️ Limitation: There is currently no signed endorsement from Azure regarding the TPM’s attestation key. We are currently working to resolve this issue. 
 
-These checks performed by the client provide robust proofs that our hashed values were measured by a genuine vTPM and that they are the values our client is expecting, but there is a final key element in the security provided by the attestation of open-source code. This final key element is the **reproducibility of hashed PCR values**, meaning the community or any interested party can audit our code, re-build our BlindLlama API and check they end up with the same hashed values relating to our stack and code in their quote from the TPM, meaning they can be sure that these hashes really do relate to the open-source code we provide.
+??? example "Understanding PCR measurements"
 
-We will detail how you can do this in our [advanced security section](../advanced-security/overview.md), which is coming soon!
+  PCR values can either be fixed, and will never change, or changeable.
+
+  For fixed PCR values, every detail of what gets measured is known in advance. Therefore, it's possible to pre-compute the expected value. 
+
+  Such PCR registers typically measure components that don't change across boots, such as firmware. 
+
+  To check them, we compare their values against the expected measurement (called a golden measurement). 
+
+  This is straightforward but rigid. The measured component can't be changed without also changing the golden measurement. So, if the PCR value matches the golden measurement, it means that the component is as expected and has not been tampered with. 
+
+  On the other hand, some PCRs relate to data that can change, such as configuration files. 
+
+  These registers are checked with the help of an event log, which records all events relevant to a particular PCR which can then be used by the verifier to recreate the same hash value. This approach is used for the application layer of BlindLlama.
+
 
 <div style="text-align: left;">
   <a href="../TCB" class="btn">Back</a>

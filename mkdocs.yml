@@ -106,14 +106,14 @@ nav:
 
 - 🚀 Getting Started: 
   - Quick tour: 'docs/getting-started/quick-tour.ipynb'
-  - How we protect your data: 'docs/getting-started/how-we-protect-your-data.md'
+  - How we achieve zero trust: 'docs/getting-started/how-we-achieve-zero-trust.md'
 
 # - 📚 Integrations:
 #   -  Configure your YAML file: 'docs/tutorials/yaml.md'
 
 - 💡 Concepts:
   - Overview: 'docs/concepts/overview.md'
-  - Hardened environments: 'docs/concepts/hardened-environments.md'
+  - Hardened systems: 'docs/concepts/hardened-systems.md'
   - Trusted Computing Base: 'docs/concepts/TCB.md'
   - Trusted Platform Modules: 'docs/concepts/TPMs.md'
   - Attested TLS: 'docs/concepts/attested-tls.md'

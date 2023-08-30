@@ -150,7 +150,7 @@ BlindLlama virtually provides the same level of security, privacy, and control a
 ## 🚀 Getting started
 
 - Check out our [Quick tour](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/quick-tour/), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
-- Find out more about [How we protect your data](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/how-we-protect-your-data/)
+- Find out more about [How we protect your data](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/how-we-achieve-zero-trust/)
 - Refer to our [Concepts](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/concepts/) guide for more information on key concepts
 - Learn more about BlindLlama's design with our [BlindLlama 101](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/blindllama-101/) guide
 

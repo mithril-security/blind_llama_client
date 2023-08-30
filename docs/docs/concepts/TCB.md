@@ -7,9 +7,12 @@ Normally, when you run an application on a machine, you need to trust multiple e
 
 These trusted elements make up what we call the **Trusted Computing Base** or **TCB** of our application.
 
-With a typical AI API, the Cloud provider buys the **hardware** and provides a VM with a particular **OS** through a **hypervisor** to the AI API provider, who deploys **their server code and model weights** on that VM.
+In the context of a regular AI API deployed in the Cloud, the TCB is made of:
 
-These elements all need to be trusted and make up the TCB of the API.
++ The hardware: the physical infrastructure on which everything runs. This includes the actual servers, the networking equipment, storage devices, etc. If there's a hardware vulnerability (like the well-known Meltdown or Spectre vulnerabilities that affected many modern processors), it can undermine the security of everything running on that hardware.
++ The hypervisor: it is responsible for creating, managing, and isolating virtual machines (VMs) on a single physical host. If there's a vulnerability in the hypervisor, malicious entities might escape their VM and affect other VMs on the same host. In the cloud, the hypervisor is the responsibility of the cloud provider.
++ The guest operating system: it provides the environment in which the applications run. Vulnerabilities at this level can allow unauthorized access, privilege escalation, or other malicious activities.
++ The application code and model weights of the AI: If there's a vulnerability in the server code or if someone can tamper with the model's weights, they might be able to produce undesired outputs, exfiltrate data, or crash the system.
 
 ## What is the TCB for BlindLlama?
 
@@ -21,7 +24,7 @@ With BlindLlama, like with a typical API set-up, we still have to trust the **Cl
 > Note, this is simplified as there are many more components that are part of the stack we could have included, such as the bootloader, kernel, etc.
 
 <div style="text-align: left;">
-  <a href="../hardened-environments" class="btn">Back</a>
+  <a href="../hardened-systems" class="btn">Back</a>
 </div>
 
 <div style="text-align: right;">
