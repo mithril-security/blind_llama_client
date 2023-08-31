@@ -27,9 +27,9 @@ Our backend has two key properties:
   
 	BlindLlama is still **under development**. Do not use it in production!
 
-	We are working towards the first audit of BlindLlama in the following months. Please refer to the [roadmap](#🎯-vision--roadmap) to know the current status of the project.
+	We are working towards the first audit of BlindLlama in the following months. Please refer to the [roadmap](#vision-roadmap) to know the current status of the project.
 
-We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/blind_llama/issues) on GitHub, [reach out to us](#🙋-getting-help) or see our guide on how to audit BlindLlama (**coming soon!**).
+We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/blind_llama/issues) on GitHub, [reach out to us](#getting-help) or see our guide on how to audit BlindLlama (**coming soon!**).
 
 
 ## 👩🏻‍💻 Use cases
