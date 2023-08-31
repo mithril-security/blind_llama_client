@@ -20,8 +20,7 @@ Let's take a look at how we attested TLS works in BlindLlama step-by-step:
 1. We deploy the BlindLlama server on Mithril Cloud
 2. On deployment, the server creates a tls-terminating reverse proxy. The reverse proxy provider takes care of generating the TLS certificate required for secure communications. Since this is done within our hardened isolated environment, it remains protected and is not accessible even to our admins. The client will communicate with this reverse proxy server, which will relay the inbound/outbound communications to the BlindLlama server.
 3. The TLS certificate is hashed by the BlindLlama server and stored in the TPM platform register PCR15. For more details about TPMs and PCRs, see our guide on [TPMs](./TPMs.md).
-4. The TLS certificate is hashed and included in a cryptographic proof file, which is then shared with clients when they connect with the server for verification.
-
+4. The TLS certificate is hashed and included in the TPM's quote, which is then shared with clients when they connect with the server for verification.
 
 ![tls-hash-light](../../assets/TLS-hash-light.png#only-light)
 ![tls-hash-dark](../../assets/TLS-hash-dark.png#only-dark)
@@ -29,24 +28,26 @@ Let's take a look at how we attested TLS works in BlindLlama step-by-step:
 
 ### Client side
 
-When the end user connects to the BlindLlama server, the client will receive the following assets from the server:
+When the end user connects to the BlindLlama server, the client will receive BlindLlama's proof file, which contains:
+
   + The server's TLS certificate from the connection
-  + The cryptographic proof file from the server
-  + A certificate chain used to verify the TPM's signature.
+  + The TPM's quote
+  + A certificate chain used to verify the TPM quote's signature
 
-![certificates-light](../../assets/certificates-light.png#only-light)
-![certificates-dark](../../assets/certificates-dark.png#only-dark)
+This TLS certificate for the current session is checked against the expected TLS certificate hash value in the TPM's quote.
 
-This proof file contains a hash of the server's TLS certificate, which is automatically verified against the TLS certificate of the current connection. 
+If they do not match, the connection will fail and an error is raised.
 
-If the TLS certificate hash in the proof file does not match the hash of the TLS certificate of the server in the current connection, the connection will fail and an error is raised.
+This prevents man-in-the-middle attacks. 
 
-This prevents man-in-the-middle attacks. If a malicious server were to intercept and forward the expected proof file, we would still be alerted to the fact that the server we are communicating with does not have the expected TLS certificate hash, and communications with this server would end there.
+If we did not implement attested TLS, a malicious server could intercept and forward an authentic and valid BlindLlama proof file which would be accepted by the client.
+
+By checking the identity of the server we are communicating with, the client knows if the server we are communicating with does not have the expected TLS certificate hash and can cut all communications with this server.
 
 ![matching-light](../../assets/matching-light.png#only-light)
 ![matching-dark](../../assets/matching-dark.png#only-dark)
 
-As detailed [in the previous section](./TPMs.md), the proof file also contains hashes relating to the stack of the machine the server is deployed on, the inference server's code and the model's weights. This means not only are we sure we are connecting to the correct server using TLS but we know that this server is serving the expected code and model!
+As detailed [in the previous section](./TPMs.md), the TPM's quote also contains hashes relating to the stack of the machine the server is deployed on, the inference server's code and the model's weights. This means not only are we sure we are connecting to the correct server using TLS but we know that this server is serving the expected code and model!
 
 <div style="text-align: left;">
   <a href="../TPMs" class="btn">Back</a>
