@@ -43,6 +43,9 @@ The BlindLlama server then additionally stores hashes of the following elements 
 
 The BlindLlama server then requests a signed quote from the TPM which contains these PCR values and is signed by the TPM's Attestation Key (AK). The AK never leaves the TPM and therefore cannot be accessed, even by our admins.
 
+![tpm-quote-dark](../../assets/tpm-quote-dark.png#only-dark)
+![tpm-quote-light](../../assets/tpm-quote-light.png#only-light)
+
 #### Creating proof file
 
 The BlindLlama server includes this TPM's quote in a cryptographic proof file, which also contains a certificate chain used to verify the TPM quote's signature and the server's TLS certificate.
@@ -50,9 +53,7 @@ The BlindLlama server includes this TPM's quote in a cryptographic proof file, w
 ![proof-dark](../../assets/proof-dark.png#only-dark)
 ![proof-light](../../assets/proof-light.png#only-light)
 
-### Client side
-
-#### Verifying the proof file
+### Client side: verifying the proof file
 
 When an end user queries our BlindLlama API, before a secure connection can be established with the server, the client will receive and verify the server's **cryptographic proof file**, which contains **the TPM's quote** signed by the private AK. 
 
@@ -60,35 +61,42 @@ The client also receives a [cert chain](https://www.ibm.com/docs/en/ztpf/1.1.0.1
 
 Verification is done in done in three steps:
 
-**Step one:** The client validates the AK using the certificate chain. This certificate chain is issued by the Cloud provider* and is evidence that the key really is the Attestation Key of one of their TPMs.
+#### 1. Verifying the Attestation Key
+
+The client validates the AK using the certificate chain. This certificate chain is issued by the Cloud provider and is evidence that the key really is the Attestation Key of one of their TPMs.
 
 ![chain-dark](../../assets/chain-dark.png#only-dark)
 ![chain-light](../../assets/chain-light.png#only-light)
 
-**Step two:** Now we have validated the AK, we use the public part of this key to check the TPM's quote's signature. This allows us to have confidence in the authenticity of the TPM quote contained within our proof file.
+!!! warning 
+    There is currently no signed endorsement from Azure for the TPM’s attestation key. We are currently working on resolving this issue. 
 
-**Step three:**  Once we have established that the TPM quote is authentic, the client recreates the quote's hash values and verifies that they match the values in quote. If any of these hashes do not match with the quote's corresponding hash, an error will be raised!
+#### 2. Verifying the TPM quote
+
+Now we have validated the AK, we use the public part of this key to check the TPM's quote's signature. This allows us to have confidence in the authenticity of the TPM quote contained within our proof file.
+
+#### 3. Verifying the hashed values
+
+Once we have established that the TPM quote is authentic, the client recreates the quote's hash values and verifies that they match the values in quote. If any of these hashes do not match with the quote's corresponding hash, an error will be raised!
 
 ![hash-check-dark](../../assets/hash-check-dark.png#only-dark)
 ![hash-check-light](../../assets/hash-check-light.png#only-light)
 
-* ⚠️ Limitation: There is currently no signed endorsement from Azure regarding the TPM’s attestation key. We are currently working to resolve this issue. 
-
 ??? example "Understanding PCR measurements"
 
-  PCR values can either be fixed, and will never change, or changeable.
+    PCR values can either be fixed, and will never change, or changeable.
 
-  For fixed PCR values, every detail of what gets measured is known in advance. Therefore, it's possible to pre-compute the expected value. 
+    For fixed PCR values, every detail of what gets measured is known in advance. Therefore, it's possible to pre-compute the expected value. 
 
-  Such PCR registers typically measure components that don't change across boots, such as firmware. 
+    Such PCR registers typically measure components that don't change across boots, such as firmware. 
 
-  To check them, we compare their values against the expected measurement (called a golden measurement). 
+    To check them, we compare their values against the expected measurement (called a golden measurement). 
 
-  This is straightforward but rigid. The measured component can't be changed without also changing the golden measurement. So, if the PCR value matches the golden measurement, it means that the component is as expected and has not been tampered with. 
+    This is straightforward but rigid. The measured component can't be changed without also changing the golden measurement. So, if the PCR value matches the golden measurement, it means that the component is as expected and has not been tampered with. 
 
-  On the other hand, some PCRs relate to data that can change, such as configuration files. 
+    On the other hand, some PCRs relate to data that can change, such as configuration files. 
 
-  These registers are checked with the help of an event log, which records all events relevant to a particular PCR which can then be used by the verifier to recreate the same hash value. This approach is used for the application layer of BlindLlama.
+    These registers are checked with the help of an event log, which records all events relevant to a particular PCR which can then be used by the verifier to recreate the same hash value. This approach is used for the application layer of BlindLlama.
 
 
 <div style="text-align: left;">

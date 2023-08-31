@@ -23,8 +23,8 @@ Let's take a look at how we attested TLS works in BlindLlama step-by-step:
 4. The TLS certificate is hashed and included in a cryptographic proof file, which is then shared with clients when they connect with the server for verification.
 
 
-![tls-hash-light](../../assets/tls-hash-light.png#only-light)
-![tls-hash-dark](../../assets/tls-hash-dark.png#only-dark)
+![tls-hash-light](../../assets/TLS-hash-light.png#only-light)
+![tls-hash-dark](../../assets/TLS-hash-dark.png#only-dark)
 
 
 ### Client side
