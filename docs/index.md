@@ -27,9 +27,9 @@ Our backend has two key properties:
   
 	BlindLlama is still **under development**. Do not use it in production!
 
-	We are working towards the first audit of BlindLlama in the following months. Please refer to the [roadmap](#🎯-vision--roadmap) to know the current status of the project.
+	We are working towards the first audit of BlindLlama in the following months. Please refer to the [roadmap](#vision-roadmap) to know the current status of the project.
 
-We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/blind_llama/issues) on GitHub, [reach out to us](#🙋-getting-help) or see our guide on how to audit BlindLlama (**coming soon!**).
+We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/blind_llama/issues) on GitHub, [reach out to us](#getting-help) or see our guide on how to audit BlindLlama (**coming soon!**).
 
 
 ## 👩🏻‍💻 Use cases
@@ -60,7 +60,7 @@ BlindLlama virtually provides the same level of security, privacy, and control a
 ________________________________________________________
 
 - Check out our [Quick tour](./docs/getting-started/quick-tour.ipynb), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
-- Find out more about [How we protect your data](./docs/getting-started/how-we-protect-your-data.md)
+- Find out more about [How we protect your data](./docs/getting-started/how-we-achieve-zero-trust.md)
 - Discover the [architecture](./docs/blind_llama/architecture.md) and [trust model](./docs/blind_llama/trust-model.md) behind BlindLlama.
  
 <!--
