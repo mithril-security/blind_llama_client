@@ -194,17 +194,7 @@ There are three key milestones planned for the BlindLlama project.
 
 ### BlindLlama Alpha (non-secure) launch: 
 
-**Project stage**
-
-To be implemented:
-
-- Python client which can be used to query the Llama2-70b model
-- Basic server-side Llama2-70b API implementation with attestation partially implemented
-- Documentation & whitepaper to explore more about the project and the technologies we use
-
-**Project capabilities**
-
-The alpha launch of BlindLlama provides an API for Llama2-70b model which you can query with our python SDK. 
+The alpha launch of BlindLlama provides an API for the Llama2-70b model which you can query with our python SDK. 
 
 Users can test out and query our API **but should not yet send any confidential data to the API** as it is does not yet have full implementation of security features.
 
@@ -214,38 +204,17 @@ The server-side code includes the backbones for our attestation feature (which m
 
 ### BlindLlama Beta launch:
 
-**Project stage**
-
-Builds on Alpha stage but with the following new features:
-
-- Full implementation and verification of TPM-based attestation, enabling end users to verify the server has deployed expected code & model on machine with expected stack
-- Attested TLS fully implemented enabling end users to be sure they are communicating with genuine BlindLlama server
-- Partial hardening of server-side environment
-
-**Project capabilities**
-
-An MVP which can be fully verified remotely (using TPM-based attestation), but does not yet have full hardening of server-side environment or audit. Not yet recommended in production!
+The beta version adds the full implementation of TPM-based attestation, meaning our API can be fully verified remotely. This version will not yet have full hardening of server-side environment or audit and thus is not yet recommended in production!
 
 > Provisional launch date: week ending 06/10/2023
 
 ### BlindLlama 1.0 audit-ready launch:
 
-**Project stage**
-
-Builds on Beta stage of BlindLlama with additional new features:
-
-- Verifiable provenance of BlindLlama binary
-- Hardened custom OS - to reduce attack surface and mitigate disk-mount based attacks
-- Full hardening of server-side environment
-
-**Project capabilities**
-
-A fully-secure version of BlindLlama ready for audit, with fully hardened server environment.
-
+A fully-secure version of BlindLlama ready for audit, with a fully hardened server environment.
 
 > Provisional launch date: week ending 08/12/2023
 
-You can check out our progress to achieveing these milestones on our [official roadmap](https://mithril-security.notion.site/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
+You can check out more details about these stages and our progress to achieveing these milestones on our [official roadmap](https://mithril-security.notion.site/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
