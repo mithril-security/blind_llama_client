@@ -177,7 +177,6 @@ ____________________________________________
 -->
 
 ## 📚 Advanced security
-___________________________
 
 We created the BlindLlama whitepaper to cover the architecture and security features behind BlindLLama in greater detail.
 
