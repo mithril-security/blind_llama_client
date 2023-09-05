@@ -98,46 +98,57 @@ There are three key milestones planned for the BlindLlama project.
 
 ### BlindLlama Alpha (non-secure) launch: 
 
-A demo BlindLlama API launched serving Llama2-70b without full security features
+**Project stage**
 
-**Features:**
+To be implemented:
 
-- Client-side Python SDK
-- Mithril Cloud hosting of BlindLlama API & API key provisioning website
-- Basic server-side implementation without full security features:
-    - Attestation with TPMs partially implemented but awaiting Cloud provider endorsement certificate for finalization
-    - Client-side verifications partially implemented but awaiting Cloud provider endorsement certificate for finalization
-- Whitepaper & documentation detailing the project’s full technical details (of implemented & planned features)
+- Python client which can be used to query the Llama2-70b model
+- Basic server-side Llama2-70b API implementation with attestation partially implemented
+- Documentation & whitepaper to explore more about the project and the technologies we use
 
-> Expected deadline: week ending 08/09/2023
+**Project capabilities**
+
+The alpha launch of BlindLlama provides an API for Llama2-70b model which you can query with our python SDK. 
+
+Users can test out and query our API **but should not yet send any confidential data to the API** as it is does not yet have full implementation of security features.
+
+The server-side code includes the backbones for our attestation feature (which means we can prove the server is deploying the expected code to end users) but this feature will be fully launched in the following beta phase.
+
+> Expected launch date: week ending 08/09/2023
 
 ### BlindLlama Beta launch:
 
-An MVP with end-to-end protection but not yet fully hardened or audited.
+**Project stage**
 
-This version builds on BlindLlama Alpha launch with the following **new features:**
+Builds on Alpha stage but with the following new features:
 
-- TPM-based attestation fully implemented
-    - Attested TLS
-- Client verification fully implemented
-- Server-side environment partially hardened but will not yet include full security features
+- Full implementation and verification of TPM-based attestation, enabling end users to verify the server has deployed expected code & model on machine with expected stack
+- Attested TLS fully implemented enabling end users to be sure they are communicating with genuine BlindLlama server
+- Partial hardening of server-side environment
 
-> Expected deadline: week ending 06/10/2023
+**Project capabilities**
 
-### BlindLlama 1.0 hardened and audit-ready launch:
+An MVP which can be fully verified remotely (using TPM-based attestation), but does not yet have full hardening of server-side environment or audit. Not yet recommended in production!
 
-A fully-secure version of BlindLlama ready for audit.
+> Provisional launch date: week ending 06/10/2023
 
-This version builds on BlindLlama Beta launch with the following **new features:**
+### BlindLlama 1.0 audit-ready launch:
 
-- Fully hardened server-side environment
-    - Hardened AI container
-    - Hardened OS
-- Verifiable provenance of binary (making a collection of verifiable data about BlindLlama builds available)
+**Project stage**
 
-> Expected deadline: week ending 08/12/2023
+Builds on Beta stage of BlindLlama with additional new features:
 
-You can check out our progress to achieveing these milestones on our [official roadmap](https://www.notion.so/mithril-security/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
+- Verifiable provenance of BlindLlama binary
+- Hardened custom OS - to reduce attack surface and mitigate disk-mount based attacks
+- Full hardening of server-side environment
+
+**Project capabilities**
+
+A fully-secure version of BlindLlama ready for audit, with fully hardened server environment.
+
+> Provisional launch date: week ending 08/12/2023
+
+You can check out our progress to achieveing these milestones on our [official roadmap](https://mithril-security.notion.site/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
 
 ## 🙋 Getting help
 ________________________________________________________
