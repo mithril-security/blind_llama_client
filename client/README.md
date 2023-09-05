@@ -65,25 +65,14 @@ Our backend has two key properties:
 
 + **Transparency**: We provide you with verifiable **cryptographic proof** that these controls are in place, thanks to the use of [Trusted Platform Modules (TPMs)](https://blindllama.readthedocs.io/en/latest/docs/getting-started/concepts/).
 
-<head>
-    <style>
-        .alert {
-            padding: 20px;
-            border: 2px solid red;
-            color: white;
-            margin-bottom: 15px;
-        }
-    </style>
-</head>
-<body>
-    <div class="alert">
+<div style="padding: 20px; border: 2px solid red; color: white; background-color: red;">
+    <p>
   ⚠️ **WARNING:** BlindLlama is still **under development** and does have the full security features.
 
   Do not test our API with confidential information... yet!
 
   You can follow our progress towards the next beta and 1.0 versions of BlindLLama on our [roadmap](https://www.notion.so/mithril-security/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26?p=65c8b337638e42e99a80bab0dd1043d9&pm=s).
-    </div>
-</body>
+</p></div>
 
 We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/blind_llama/issues) on GitHub, <a href="#-contact">reach out to us</a> or see our guide on how to audit BlindLlama (**coming soon!**).
 
