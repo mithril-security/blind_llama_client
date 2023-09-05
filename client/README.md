@@ -42,6 +42,7 @@
     <li><a href="#-about-the-project">About the project</a></li>
     <li><a href="#-use-cases">Use cases</a></li>
     <li><a href="#-getting-started">Getting started</a></li>
+    <li><a href="#-advanced-security">Advanced security</a></li>
     <li><a href="#-vision-and-roadmap">Vision and roadmap</a></li>
     <li><a href="#about-us">About us</a></li>
     <li><a href="#-contact">Contact</a></li>
@@ -175,12 +176,14 @@ ____________________________________________
 - [Past Projects](./docs/past-projects/blindai) informs you of our past audited project BlindAI, of which BlindBox is the evolution. 
 -->
 
-<!-- ## ❓ Why trust us?
+## 📚 Advanced security
 ___________________________
 
-+ **Our core security features are open source.** We believe that transparency is the best way to ensure security and you can inspect the code yourself on our [GitHub page](https://github.com/mithril-security/blindbox).
+We created the BlindLlama whitepaper to cover the architecture and security features behind BlindLLama in greater detail.
 
-+ **Our historical project [BlindAI](docs/past-projects/blindai.md) was successfully audited** by Quarkslab. Although both projects differ (BlindAI was meant for the confidential deployment of ONNX models inside Intel SGX enclaves), we want to highlight that we are serious about our security standards and know how to code secure remote attestation. -->
+The whitepaper is intended for an audience with security expertise.
+
+You can read or download the whitepaper [here](https://docsend.com/view/dkepc5fd8njh7i46)!
 
 ## 🎯 Vision and roadmap
 
