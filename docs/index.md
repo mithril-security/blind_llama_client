@@ -25,9 +25,11 @@ Our backend has two key properties:
 
 !!! warning
   
-	BlindLlama is still **under development**. Do not use it in production!
+	BlindLlama is still **under development**. It does not yet have the full security features.
+	
+	Do not test our API with confidential information... yet!
 
-	We are working towards the first audit of BlindLlama in the following months. Please refer to the [roadmap](#vision-roadmap) to know the current status of the project.
+	You can follow our progress towards the next beta and 1.0 versions of BlindLLama on our [roadmap](https://mithril-security.notion.site/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
 
 We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/blind_llama/issues) on GitHub, [reach out to us](#getting-help) or see our guide on how to audit BlindLlama (**coming soon!**).
 
@@ -89,15 +91,53 @@ ___________________________
 
 + **Our historical project [BlindAI](docs/past-projects/blindai.md) was successfully audited** by Quarkslab. Although both projects differ (BlindAI was meant for the confidential deployment of ONNX models inside Intel SGX enclaves), we want to highlight that we are serious about our security standards and know how to code secure remote attestation. -->
 
-## 🎯 Vision & roadmap
+## 🎯 Roadmap
 ___________________________
 
-**Planned new features**:
+There are three key milestones planned for the BlindLlama project.
 
-+ **Confidential GPUs** for additional shielding
-+ **Sandboxes** for additional isolation
-+ **Finetuning endpoints** for all our APIs
-+ **More APIs** to cover a wider range of popular open-source models
+### BlindLlama Alpha (non-secure) launch: 
+
+A demo BlindLlama API launched serving Llama2-70b without full security features
+
+**Features:**
+
+- Client-side Python SDK
+- Mithril Cloud hosting of BlindLlama API & API key provisioning website
+- Basic server-side implementation without full security features:
+    - Attestation with TPMs partially implemented but awaiting Cloud provider endorsement certificate for finalization
+    - Client-side verifications partially implemented but awaiting Cloud provider endorsement certificate for finalization
+- Whitepaper & documentation detailing the project’s full technical details (of implemented & planned features)
+
+> Expected deadline: week ending 08/09/2023
+
+### BlindLlama Beta launch:
+
+An MVP with end-to-end protection but not yet fully hardened or audited.
+
+This version builds on BlindLlama Alpha launch with the following **new features:**
+
+- TPM-based attestation fully implemented
+    - Attested TLS
+- Client verification fully implemented
+- Server-side environment partially hardened but will not yet include full security features
+
+> Expected deadline: week ending 06/10/2023
+
+### BlindLlama 1.0 hardened and audit-ready launch:
+
+A fully-secure version of BlindLlama ready for audit.
+
+This version builds on BlindLlama Beta launch with the following **new features:**
+
+- Fully hardened server-side environment
+    - Hardened AI container
+    - Hardened OS
+- Verifiable provenance of binary (making a collection of verifiable data about BlindLlama builds available)
+
+> Expected deadline: week ending 08/12/2023
+
+You can check out our progress to achieveing these milestones on our [official roadmap](https://www.notion.so/mithril-security/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
 
 ## 🙋 Getting help
 ________________________________________________________
