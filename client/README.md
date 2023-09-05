@@ -64,10 +64,26 @@ Our backend has two key properties:
 + **Confidentiality**: Your data is **never accessible to us**. We serve AI models inside **hardened environments** that do not expose data even to our admins. All points of access, such as SSH, logs, networks, etc., are blocked to ensure the isolation of data.
 
 + **Transparency**: We provide you with verifiable **cryptographic proof** that these controls are in place, thanks to the use of [Trusted Platform Modules (TPMs)](https://blindllama.readthedocs.io/en/latest/docs/getting-started/concepts/).
-  
-	⚠️ **WARNING:** BlindLlama is still **under development**. Do not use it in production!
 
-	Please refer to the <a href="https://www.notion.so/mithril-security/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26?p=65c8b337638e42e99a80bab0dd1043d9&pm=s">roadmap</a> to know the current status of the project.
+<head>
+    <style>
+        .alert {
+            padding: 20px;
+            border: 2px solid red;
+            color: white;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert">
+  ⚠️ **WARNING:** BlindLlama is still **under development** and does have the full security features.
+
+  Do not test our API with confidential information... yet!
+
+  You can follow our progress towards the next beta and 1.0 versions of BlindLLama on our [roadmap](https://www.notion.so/mithril-security/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26?p=65c8b337638e42e99a80bab0dd1043d9&pm=s).
+    </div>
+</body>
 
 We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/blind_llama/issues) on GitHub, <a href="#-contact">reach out to us</a> or see our guide on how to audit BlindLlama (**coming soon!**).
 

@@ -25,9 +25,11 @@ Our backend has two key properties:
 
 !!! warning
   
-	BlindLlama is still **under development**. Do not use it in production!
+	BlindLlama is still **under development**. It does not yet have the full security features.
+	
+	Do not test our API with confidential information... yet!
 
-	We are working towards the first audit of BlindLlama in the following months. Please refer to the [roadmap](#vision-roadmap) to know the current status of the project.
+	You can follow our progress towards the next beta and 1.0 versions of BlindLLama on our [roadmap](https://www.notion.so/mithril-security/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26?p=65c8b337638e42e99a80bab0dd1043d9&pm=s).
 
 We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/blind_llama/issues) on GitHub, [reach out to us](#getting-help) or see our guide on how to audit BlindLlama (**coming soon!**).
 
