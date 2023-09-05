@@ -65,7 +65,8 @@ Our backend has two key properties:
 
 + **Transparency**: We provide you with verifiable **cryptographic proof** that these controls are in place, thanks to the use of [Trusted Platform Modules (TPMs)](https://blindllama.readthedocs.io/en/latest/docs/getting-started/concepts/).
 
-[!WARNING]  BlindLlama is still **under development** and does have the full security features.
+**Warning** hello
+  BlindLlama is still **under development** and does have the full security features.
 
   Do not test our API with confidential information... yet!
 
