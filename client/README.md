@@ -184,14 +184,53 @@ The whitepaper is intended for an audience with security expertise.
 
 You can read or download the whitepaper [here](https://docsend.com/view/dkepc5fd8njh7i46)!
 
-## 🎯 Vision and roadmap
+## 🎯 Roadmap
 
-**Planned new features**:
+There are three key milestones planned for the BlindLlama project.
 
-+ **Confidential GPUs** for additional shielding
-+ **Sandboxes** for additional isolation
-+ **Finetuning endpoints** for all our APIs
-+ **More APIs** to cover a wider range of popular open-source models
+### BlindLlama Alpha (non-secure) launch: 
+
+A demo BlindLlama API launched serving Llama2-70b without full security features
+
+**Features:**
+
+- Client-side Python SDK
+- Mithril Cloud hosting of BlindLlama API & API key provisioning website
+- Basic server-side implementation without full security features:
+    - Attestation with TPMs partially implemented but awaiting Cloud provider endorsement certificate for finalization
+    - Client-side verifications partially implemented but awaiting Cloud provider endorsement certificate for finalization
+- Whitepaper & documentation detailing the project’s full technical details (of implemented & planned features)
+
+> Expected deadline: week ending 08/09/2023
+
+### BlindLlama Beta launch:
+
+An MVP with end-to-end protection but not yet fully hardened or audited.
+
+This version builds on BlindLlama Alpha launch with the following **new features:**
+
+- TPM-based attestation fully implemented
+    - Attested TLS
+- Client verification fully implemented
+- Server-side environment partially hardened but will not yet include full security features
+
+> Expected deadline: week ending 06/10/2023
+
+### BlindLlama 1.0 hardened and audit-ready launch:
+
+A fully-secure version of BlindLlama ready for audit.
+
+This version builds on BlindLlama Beta launch with the following **new features:**
+
+- Fully hardened server-side environment
+    - Hardened AI container
+    - Hardened OS
+- Verifiable provenance of binary (making a collection of verifiable data about BlindLlama builds available)
+
+> Expected deadline: week ending 08/12/2023
+
+You can check out our progress to achieveing these milestones on our [official roadmap](https://www.notion.so/mithril-security/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -216,15 +255,6 @@ BlindLlama builds on the foundations of BlindAI but provides much faster perform
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://github.com/alexandresanlim/Badges4-README.md-Profile#-blog- -->
-<!-- [contributors-shield]: https://img.shields.io/github/contributors/mithril-security/aicert.svg?style=for-the-badge
-[contributors-url]: https://github.com/mithril-security/aicert/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/mithril-security/aicert.svg?style=for-the-badge
-[forks-url]: https://github.com/mithril-security/blindbox/network/members
-[stars-shield]: https://img.shields.io/github/stars/mithril-security/aicert.svg?style=for-the-badge
-[stars-url]: https://github.com/mithril-security/blindbox/stargazers
-[issues-shield]: https://img.shields.io/github/issues/mithril-security/aicert.svg?style=for-the-badge
-<!-- [issues-url]: https://github.com/mithril-security/aicert/issues -->
 [project-url]: https://github.com/mithril-security/aicert
 [twitter-url]: https://twitter.com/MithrilSecurity
 [contact-url]: https://www.mithrilsecurity.io/contact
@@ -250,4 +280,3 @@ BlindLlama builds on the foundations of BlindAI but provides much faster perform
 [Intel-SGX]: https://img.shields.io/badge/SGX-FFD43B?style=for-the-badge&logo=intel&logoColor=black
 [Intel-sgx-url]: https://www.intel.fr/content/www/fr/fr/architecture-and-technology/software-guard-extensions.html
 [Tract]: https://img.shields.io/badge/Tract-FFD43B?style=for-the-badge
-<!-- [tract-url]: https://github.com/mithril-security/tract/tree/6e4620659837eebeaba40ab3eeda67d33a99c7cf -->
