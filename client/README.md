@@ -70,7 +70,7 @@ Our backend has two key properties:
 >
 > Do not test our API with confidential information... yet!
 >
-> You can follow our progress towards the next beta and 1.0 versions of BlindLLama on our [roadmap](https://www.notion.so/mithril-security/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26?p=65c8b337638e42e99a80bab0dd1043d9&pm=s).
+> You can follow our progress towards the next beta and 1.0 versions of BlindLLama on our [roadmap](https://mithril-security.notion.site/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
 
 
 We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/blind_llama/issues) on GitHub, <a href="#-contact">reach out to us</a> or see our guide on how to audit BlindLlama (**coming soon!**).
@@ -233,7 +233,7 @@ This version builds on BlindLlama Beta launch with the following **new features:
 
 > Expected deadline: week ending 08/12/2023
 
-You can check out our progress to achieveing these milestones on our [official roadmap](https://www.notion.so/mithril-security/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
+You can check out our progress to achieveing these milestones on our [official roadmap](https://mithril-security.notion.site/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
