@@ -44,7 +44,7 @@ For users to fully trust us, there needs to be reviews of the codebase for both 
 
 Our code is open-source and we encourage the community to review our codebase. We have already had one of our AI deployment solutions, [BlindAI](https://github.com/mithril-security/blindai), audited by [Quarkslab](https://www.quarkslab.com/). Community and professional audits help to provide a high level of confidence that our hardened environments implement all the security checks we say they do.
 
-You can find get more details on our implementation of our verifiable Zero-trust API in our [advanced security section](../advanced-security/overview.md)(**coming soon!**).
+You can find get more details on our implementation of our verifiable Zero-trust API in our [whitepaper](https://docsend.com/view/dkepc5fd8njh7i46).
 
 
 ## Client side
