@@ -119,7 +119,7 @@ nav:
   - Attested TLS: 'docs/concepts/attested-tls.md'
 
 - 🔒 Advanced Security:
-  - Overview: 'docs/advanced-security/overview.md'
+  - BlindLlama whitepaper: 'docs/advanced-security/whitepaper.md'
 
 - 🛠️ API reference: 'blind_llama/client.html'
 
