@@ -91,6 +91,14 @@ ___________________________
 
 + **Our historical project [BlindAI](docs/past-projects/blindai.md) was successfully audited** by Quarkslab. Although both projects differ (BlindAI was meant for the confidential deployment of ONNX models inside Intel SGX enclaves), we want to highlight that we are serious about our security standards and know how to code secure remote attestation. -->
 
+## 📚 Advanced security whitepaper
+
+We created the BlindLlama whitepaper to cover the architecture and security features behind BlindLLama in greater detail.
+
+The whitepaper is intended for an audience with security expertise.
+
+You can read or download the whitepaper [here](https://docsend.com/view/dkepc5fd8njh7i46)!
+
 ## 🎯 Roadmap
 ___________________________
 

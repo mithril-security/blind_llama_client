@@ -65,3 +65,5 @@ The server also provides the client with its TLS certificate. This is unique to 
 > The TLS certificate is signed by a private key that lives inside and never leaves the hardened environment. 
 
 More information about attestation and attested TLS can be found in our [concepts guide](../concepts/attested-tls.md).
+
+We also provide a BlindLlama whitepaper for an audience with security expertise which covers the architecture and security features behind BlindLLama in greater detail. You can read or download the whitepaper [here](https://docsend.com/view/dkepc5fd8njh7i46)!
