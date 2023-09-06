@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "blind_llama"
-version = "0.0.2"
+version = "0.1.3-dev0"
 description = ""
 authors = ["Mithril Security <contact@mithrilsecurity.io>"]
 readme = "README.md"
@@ -8,15 +8,19 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.8"
 requests = { version = "^2.28.2"}
+pydantic = { version = "^2.2.0" }
+pyopenssl = { version = "^23.2.0" }
+rich = { version = "^13.3.5" }
+pyyaml = { version = "^6.0" }
 pyjwt = { version = "^2.7.0" }
 grpcio = { version = "1.56.2" }
 grpcio-tools = { version = "1.56.2" }
 protobuf = { version = "4.24.0" }
-pydantic = { version = "^1.10.7" }
+typer = {extras = ["all"], version = "^0.9.0"}
 
 [tool.poetry-grpc-plugin]
 proto_path = "proto" 
-python_out = "blindllama/pb"     
+python_out = "blindllama/pb"
 
 [build-system]
 requires = ["poetry-core"]
