@@ -121,7 +121,10 @@ nav:
 - 🔒 Advanced Security:
   - BlindLlama whitepaper: 'docs/advanced-security/whitepaper.md'
 
-- 🛠️ API reference: blind_llama/completion.html
+- 🛠️ API reference: 
+  - Completion: blind_llama/completion.html
+  - Index: blind_llama/index.html
+  - Errors: blind_llama/errors.html
 
 # - 💫 Other projects: 
 #   - BlindBox: 'docs/past-projects/blindbox.md'
