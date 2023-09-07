@@ -59,6 +59,12 @@ class Client():
         self,
         verbose: bool = False
     ):
+        """Init the Client class.
+        Args:
+            verbose (bool, default = False): Allows to print all details of the verification process.
+        Returns:
+            Client: Client object.
+        """
         self.verbose = verbose
         #self.__base_url = f"{openai2.api_base}:8000"
         self.__base_url = "https://llama_worker"
@@ -218,12 +224,12 @@ class Client():
     def predict(
         self,
         prompt: str,
-        temperature: float,
+        temperature: float = 0.7,
     ) -> str:
         """Start a prediction.
         Args:
             prompt (str): The prompt on which you want to run a prediction on.
-            temperature (float): The temperature requested.
+            temperature (float, default = 0.7): The temperature requested.
         Returns:
             str: The result of the prediction made by the server
         """
@@ -247,9 +253,10 @@ class Client():
 def create(model: str = "meta-llama/Llama-2-70b-chat-hf", prompt: str = "", temperature: float = 0.7, verbose: bool = False) -> str:
     """Start a prediction.
     Args:
-        model (str): The model on which you want to run a prediction on (default to meta-llama/Llama-2-70b-chat-hf).
+        model (str, default = "meta-llama/Llama-2-70b-chat-hf"): The model on which you want to run a prediction on.
         prompt (str): The prompt on which you want to run a prediction on.
-        temperature (float): The temperature requested (default to 0.7).
+        temperature (float, default = 0.7): The temperature requested (default to 0.7).
+        verbose (bool, default = False): Allows to print all details of the verification process.
     Returns:
         str: The result of the prediction made by the server
     """
