@@ -41,7 +41,6 @@
   <ol>
     <li><a href="#-about-the-project">About the project</a></li>
     <li><a href="#-use-cases">Use cases</a></li>
-    <li><a href="#-getting-started">Getting started</a></li>
     <li><a href="#-advanced-security">Advanced security</a></li>
     <li><a href="#-vision-and-roadmap">Vision and roadmap</a></li>
     <li><a href="#about-us">About us</a></li>
@@ -74,6 +73,15 @@ Our backend has two key properties:
 
 
 We welcome contributions to our project from the community! Don't hesitate to [raise issues](https://github.com/mithril-security/blind_llama/issues) on GitHub, <a href="#-contact">reach out to us</a> or see our guide on how to audit BlindLlama (**coming soon!**).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### 🚀 Getting started
+
+- Check out our [Quick tour](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/quick-tour/), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
+- Find out more about [How we protect your data](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/how-we-achieve-zero-trust/)
+- Refer to our [Concepts](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/concepts/) guide for more information on key concepts
+- Learn more about BlindLlama's design with our [BlindLlama 101](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/blindllama-101/) guide
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -152,15 +160,6 @@ BlindLlama virtually provides the same level of security, privacy, and control a
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Getting started
-
-- Check out our [Quick tour](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/quick-tour/), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
-- Find out more about [How we protect your data](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/how-we-achieve-zero-trust/)
-- Refer to our [Concepts](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/concepts/) guide for more information on key concepts
-- Learn more about BlindLlama's design with our [BlindLlama 101](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/blindllama-101/) guide
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!--
 ## 📚 How is the documentation structured?
 ____________________________________________
@@ -231,11 +230,19 @@ BlindLlama builds on the foundations of BlindAI but provides much faster perform
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 📇 Contact
+## 📇 Get in touch
 
-[![Contact us][contact]][contact-url]
-[![Twitter][twitter]][website-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+We would love to hear your feedback or suggestions, here are the ways you can reach us:
+  - To request new features, go to the [discussions page](https://github.com/mithril-security/blind_llama/discussions) of our GitHub repo
+  - Found a bug? [Open an issue!](https://github.com/mithril-security/blind_llama/issues)
+  - Want to be part of our Discord community? [Join us!](https://discord.com/invite/TxEHagpWd4)
+  - Set up [a one-on-one meeting](https://www.mithrilsecurity.io/contact) with a member of our team
+
+Want to hear more about BlindLlama and privacy in the field AI?
+- Check out our [blog](https://blog.mithrilsecurity.io/)
+- You can subscribe to our newsletter [here](https://blog.mithrilsecurity.io/)
+
+Thank you for your support!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
