@@ -191,23 +191,23 @@ You can read or download the whitepaper [here](https://docsend.com/view/dkepc5fd
 
 There are three key milestones planned for the BlindLlama project.
 
-### BlindLlama Alpha (non-secure) launch: 
+### BlindLlama Alpha launch (not attestable): 
 
-The alpha launch of BlindLlama provides an API for the Llama2-70b model which you can query with our python SDK. 
+The alpha launch of BlindLlama provides a regular API for the Llama2-70b model which you can query with our python SDK. 
 
 Users can test out and query our API **but should not yet send any confidential data to the API** as it is does not yet have full implementation of security features.
 
-The server-side code includes the backbones for our attestation feature (which means we can prove the server is deploying the expected code to end users) but this feature will be fully launched in the following beta phase.
+The server-side code already includes the backbones for our attestation feature (which will enable us to be able to prove the server is deploying the expected code to end users) but this feature will be fully launched in the following beta phase.
 
 > Expected launch date: week ending 08/09/2023
 
-### BlindLlama Beta launch:
+### BlindLlama Beta launch (with attestation):
 
 The beta version adds the full implementation of TPM-based attestation, meaning our API can be fully verified remotely. This version will not yet have full hardening of server-side environment or audit and thus is not yet recommended in production!
 
 > Provisional launch date: week ending 06/10/2023
 
-### BlindLlama 1.0 audit-ready launch:
+### BlindLlama 1.0 launch (audit-ready):
 
 A fully-secure version of BlindLlama ready for audit, with a fully hardened server environment.
 
