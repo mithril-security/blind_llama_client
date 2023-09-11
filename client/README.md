@@ -90,23 +90,21 @@ We welcome contributions to our project from the community! Don't hesitate to [r
 BlindLlama is composed of two main parts:
 
 + An **open-source client-side Python SDK** that verifies the remote Zero-trust AI models we serve are indeed guaranteeing data sent is not exposed to us.
-+ An **open-source server** made up of three key components which work together to serve models without any exposure to the AI provider (Mithril Seucirty). We remove all potential server-side leakage channels from network to logs and provide cryptographic proof that those privacy controls are in place using [TPMs](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/TPMs/).
++ An **open-source server** that serves models without any exposure to us as the server is hardened and removed potential leakage channels from network to logs, and provides cryptographic proof those privacy controls are indeed in place using TPMs.
 
-![arch](./docs/assets/arch-dark.png)
+The server combines a hardened AI server with attested TLS using [TPMs](./docs/docs/concepts/TPMs.md).
 
 The client performs two main tasks:
 
 + **Verifying that the server it communicates with is the expected hardened AI server** using attestation.
 + **Securely sending data** to be analyzed by a remote AI model using attested TLS to ensure data is not exposed.
 
-The server is split into three components:
+The server has two main tasks:
 
-+ The **hardened AI container**: This element serves our AI API in an isolated [hardened environment](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/hardened-systems/).
-+ The **attesting launcher**: The launcher loads the hardened AI container and creates a proof file which is used to verify the API's code and model using [TPM-based attestation](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/TPMs/). 
-+ The **reverse proxy**: The reverse proxy handles communications to and from the client and the container and launcher using [atested TLS](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/attested-tls/).
++ It **loads a hardened AI server** which is inspected to ensure no data is exposed to the outside.
++ It **serves models using the hardened AI server that can be remotely verified** using attestation.
 
-![serv-arch](./docs/assets/serv-arch-dark.png)
-
+> Note that there are three key components behind what we call the "server" here. You can find out more about each of these components and how they interact [in our docs](https://blindllama.mithrilsecurity.io/en/latest/docs/blind_llama/architecture/).
 
 ### Trust model
 
@@ -114,11 +112,11 @@ On this page, we will explain more precisely what components/parties have to be 
 
 To understand better which components and parties are trusted with BlindLlama, let’s start by examining what is trusted with regular AI services.
 
-To do so, we will use the concept of a [Trusted Computing Base (TCB)](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/TCB/), which refers to the set of all hardware, firmware, and software components that are critical to a system's security.
+To do so, we will use the concept of a [Trusted Computing Base (TCB)](./docs/docs/concepts/TCB.md), which refers to the set of all hardware, firmware, and software components that are critical to a system's security.
 
 #### Trusted Computing Base with regular AI providers
 
-We can imagine that an AI provider serves AI APIs to their users using a Cloud infrastructure. Then the parties to be trusted are:
+In the case of an AI provider serving an AI API to end users on a Cloud infrastructure, the parties to be trusted are:
 
 + **The AI provider**: they provide the software application that is in charge of applying AI models to users’ data. Examples of AI providers in the industry include Hugging Face, OpenAI, Cohere, etc.
 
@@ -132,13 +130,15 @@ In most scenarios today, there is often blind trust in the AI provider, aka **we
 
 For privacy-demanding users that require more technical guarantees, they often choose simply not to use AI APIs as they cannot trust AI providers with their confidential data.
 
-#### Trusted parties with BlindLlama
+## Trusted parties with BlindLlama
 
 With BlindLlama, we remove the AI provider (Mithril Security) from the list of trusted parties. When models are served with BlindLlama, our admins cannot see user data because we use a Zero-trust AI infrastructure, removing the need for users to blindly trust us. 
 	
 We can prove such controls are in place using [TPM-based attestation](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/TPMs/).
 
-![trust-model](./docs/assets/trust-model-dark.png)
+![trust-model-dark](./docs/assets/trust-model-dark.png)
+
+> See our section on BlindLlama's [Trusted Computing Base (TCB)](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/TCB/) to see which components we trust or verify in our stack!
 
 ## 👩🏻‍💻 Use cases
 
