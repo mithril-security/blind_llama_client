@@ -90,9 +90,7 @@ We welcome contributions to our project from the community! Don't hesitate to [r
 BlindLlama is composed of two main parts:
 
 + An **open-source client-side Python SDK** that verifies the remote Zero-trust AI models we serve are indeed guaranteeing data sent is not exposed to us.
-+ An **open-source server** that serves models without any exposure to us as the server is hardened and removed potential leakage channels from network to logs, and provides cryptographic proof those privacy controls are indeed in place using TPMs.
-
-The server combines a hardened AI server with attested TLS using [TPMs](./docs/docs/concepts/TPMs.md).
++ An **open-source server** that serves models without exposing any user data to the AI provider (Mithril security). This is achieved by hardening the server components and removing any potential leakage channels from network to logs. We provide cryptographic proof those privacy controls are indeed in place using [TPMs](./docs/docs/concepts/TPMs.md).
 
 The client performs two main tasks:
 
