@@ -136,7 +136,8 @@ With BlindLlama, we remove the AI provider (Mithril Security) from the list of t
 	
 We can prove such controls are in place using [TPM-based attestation](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/TPMs/).
 
-![trust-model-dark](./docs/assets/trust-model-dark.png)
+![trust-model-dark](./docs/assets/trust-model-dark.png#gh-dark-mode-only)
+![trust-model-light](./docs/assets/trust-model-light.png#gh-light-mode-only)
 
 > See our section on BlindLlama's [Trusted Computing Base (TCB)](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/TCB/) to see which components we trust or verify in our stack!
 
