@@ -92,7 +92,7 @@ BlindLlama is composed of two main parts:
 + An **open-source client-side Python SDK** that verifies the remote Zero-trust AI models we serve are indeed guaranteeing data sent is not exposed to us.
 + An **open-source server** made up of three key components which work together to serve models without any exposure to the AI provider (Mithril Seucirty). We remove all potential server-side leakage channels from network to logs and provide cryptographic proof that those privacy controls are in place using [TPMs](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/TPMs/).
 
-![trust-model-dark](./docs/assets/serv-light.png)
+![arch](./docs/assets/arch-dark.png)
 
 The client performs two main tasks:
 
@@ -105,7 +105,7 @@ The server is split into three components:
 + The **attesting launcher**: The launcher loads the hardened AI container and creates a proof file which is used to verify the API's code and model using [TPM-based attestation](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/TPMs/). 
 + The **reverse proxy**: The reverse proxy handles communications to and from the client and the container and launcher using [atested TLS](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/attested-tls/).
 
-![trust-model-dark](./docs/assets/serv-arch-light.png)
+![serv-arch](./docs/assets/serv-arch-dark.png)
 
 
 ### Trust model
@@ -138,7 +138,7 @@ With BlindLlama, we remove the AI provider (Mithril Security) from the list of t
 	
 We can prove such controls are in place using [TPM-based attestation](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/TPMs/).
 
-![trust-model-light](../../assets/trust-model-light.png)
+![trust-model](./docs/assets/trust-model-dark.png)
 
 ## 👩🏻‍💻 Use cases
 
