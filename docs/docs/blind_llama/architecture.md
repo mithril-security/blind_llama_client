@@ -4,10 +4,11 @@ ________________________________________________________
 BlindLlama is composed of two main parts:
 
 1. An **open-source client-side Python SDK** that verifies the remote Zero-trust AI models we serve are indeed guaranteeing data sent is not exposed to us.
-2. An **open-source server** that serves models without any exposure to us as the server is hardened and removed potential leakage channels from network to logs, and provides cryptographic proof those privacy controls are indeed in place using TPMs.
+2. An **open-source server** made up of three key components which work together to serves models without any exposure to the AI provider (Mithril Seucirty). We remove all potential server-side leakage channels from network to logs and provide cryptographic proof that those privacy controls are in place using [TPMs](../concepts/TPMs.md).
 
 ![arch-light](../../assets/arch-light.png#only-light)
 ![arch-dark](../../assets/arch-dark.png#only-dark)
+
 ## Client
 
 The client performs two main tasks:
@@ -17,9 +18,11 @@ The client performs two main tasks:
 
 ## Server
 
-The server has two main tasks:
+The server is split into three components:
 
-+ It **loads a hardened AI server** which is inspected to ensure no data is exposed to the outside.
-+ It **serves models using the hardened AI server that can be remotely verified** using attestation.
++ The **hardened AI container**: This element serves our AI API in an isolated [hardened environment](../concepts/hardened-systems.md).
++ The **attesting launcher**: The launcher loads the hardened AI container and creates a proof file which is used to verify the API's code and model using [TPM-based attestation](../concepts/TPMs.md). 
++ The **reverse proxy**: The reverse proxy handles communications to and from the client and the container and launcher using [atested TLS](../concepts/attested-tls.md).
 
-The server combines a hardened AI server with attested TLS using [TPMs](../concepts/TPMs.md).
+![serv-arch-light](../../assets/arch-light.png#only-light)
+![serv-arch-dark](../../assets/arch-dark.png#only-dark)
