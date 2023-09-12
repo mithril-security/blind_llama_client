@@ -43,8 +43,9 @@
     <li><a href="#-use-cases">Use cases</a></li>
     <li><a href="#-advanced-security">Advanced security</a></li>
     <li><a href="#-vision-and-roadmap">Vision and roadmap</a></li>
-    <li><a href="#about-us">About us</a></li>
-    <li><a href="#-contact">Contact</a></li>
+    <li><a href="#-about-us">About us</a></li>
+    <li><a href="#-contributing">Contributing</a></li>
+    <li><a href="#-get-in-touch">Contact</a></li>
   </ol>
 </details>
 
