@@ -235,17 +235,35 @@ BlindLlama builds on the foundations of BlindAI but provides much faster perform
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🤝 Contributing
+
+Here’s how you can help us make AI confidential:
+
+### 🛠️ Code contribution
+
+You can contribute our code by forking our project on [GitHub](https://github.com/mithril-security/blind_llama) and creating a new pull request. Make sure to detail the modifications you are suggesting in your pull request description.
+
+### 🌎 Spread the word
+
+Share our project on social media!
+
+[![share-on-twitter][twitter]][twitter-share]
+[![share-on-fb][fb-shield]][facebook-share]
+[![share-on-reddit][reddit-shield]][reddit-share]
+[![share-on-linkedin][linkedin-shield]][linkedin-share]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 📇 Get in touch
 
 We would love to hear your feedback or suggestions, here are the ways you can reach us:
-  - To request new features, go to the [discussions page](https://github.com/mithril-security/blind_llama/discussions) of our GitHub repo
   - Found a bug? [Open an issue!](https://github.com/mithril-security/blind_llama/issues)
-  - Want to be part of our Discord community? [Join us!](https://discord.com/invite/TxEHagpWd4)
+  - Got a suggestion? [Join our Discord community and let us know!](https://discord.com/invite/TxEHagpWd4)
   - Set up [a one-on-one meeting](https://www.mithrilsecurity.io/contact) with a member of our team
 
-Want to hear more about BlindLlama and privacy in the field AI?
+Want to hear more about our work on privacy in the field AI?
 - Check out our [blog](https://blog.mithrilsecurity.io/)
-- You can subscribe to our newsletter [here](https://blog.mithrilsecurity.io/)
+- Subscribe to our newsletter [here](https://blog.mithrilsecurity.io/)
 
 Thank you for your support!
 
@@ -277,3 +295,7 @@ Thank you for your support!
 [Intel-SGX]: https://img.shields.io/badge/SGX-FFD43B?style=for-the-badge&logo=intel&logoColor=black
 [Intel-sgx-url]: https://www.intel.fr/content/www/fr/fr/architecture-and-technology/software-guard-extensions.html
 [Tract]: https://img.shields.io/badge/Tract-FFD43B?style=for-the-badge
+[facebook-share]: https://www.facebook.com/sharer/sharer.php?u=https%3A//github.com/mithril-security/blind_llama
+[twitter-share]: https://twitter.com/intent/tweet?url=https://github.com/mithril-security/blind_llama&text=Check%20out%20this%20open-source%20project%20that%20aims%20to%20make%20AI%20private
+[linkedin-share]: https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/mithril-security/blind_llama
+[reddit-share]: https://www.reddit.com/submit?url=github.com%2Fmithril-security%2Fblind_llama&title=Private%20in-browser%20Conversational%20AI%20with%20BlindLlama
