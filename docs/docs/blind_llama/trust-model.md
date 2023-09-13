@@ -9,11 +9,11 @@ To understand better which components and parties are trusted with BlindLlama, l
 
 In the case of an AI provider serving an AI API to end users on a Cloud infrastructure, the parties to be trusted are:
 
-+ **The AI provider**: they provide the software application that is in charge of applying AI models to users’ data.
++ **The AI provider**: they provide the software application that is in charge of applying AI models to users’ data. Examples of AI providers in the industry include Hugging Face, OpenAI, Cohere, etc.
 
-+ **The Cloud provider**: they provide the infrastructure, Hypervisor, VMs and OS, to the AI provider.
++ **The Cloud provider**: they provide the infrastructure, Hypervisor, VMs and OS, to the AI provider. Examples of Cloud providers in the industry include Azure, GCP, AWS, etc. 
 
-+ **The hardware providers**: they provide the physical components, CPU, GPU, TPMs, etc. to the Cloud provider. 
++ **The hardware providers**: they provide the physical components, CPU, GPU, TPMs, etc. to the Cloud provider. Examples of hardware provders in the industry include Intel, AMD, Nvidia, etc. 
 
 The higher the party in the stack, the closer they are to the data. Thus, the AI provider if malicious or negligent represents the biggest security risk for the user of the API.
 
@@ -23,7 +23,7 @@ For privacy-demanding users that require more technical guarantees, they often c
 
 ## Trusted parties with BlindLlama
 
-With BlindLlama, we remove the AI provider from the list of trusted parties. When models are served with BlindLlama, users' data cannot be seen by the AI provider because we use a Zero-trust AI infrastructure that removes the need to trust us. 
+With BlindLlama, we remove the AI provider (Mithril Security) from the list of trusted parties. When models are served with BlindLlama, our admins cannot see user data because we use a Zero-trust AI infrastructure, removing the need for users to blindly trust us. 
 	
 We can prove such controls are in place using [TPM-based attestation](../concepts/TPMs.md).
 

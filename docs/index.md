@@ -129,12 +129,37 @@ A fully-secure version of BlindLlama ready for audit, with a fully hardened serv
 You can check out more details about these stages and our progress to achieveing these milestones on our [official roadmap](https://mithril-security.notion.site/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
 
 
-## 🙋 Getting help
-________________________________________________________
+## 🤝 Contributing
 
-- Go to our [Discord](https://discord.com/invite/TxEHagpWd4) *#support* channel
-<!-- - Report bugs by [opening an issue on our AICert Github](https://github.com/mithril-security/aicert/issues) -->
-- [Book a meeting](https://calendly.com/contact-mithril-security/15mins?month=2022-11) with us
+Here’s how you can help us make AI confidential:
+
+### 🛠️ Code contribution
+
+You can contribute our code by forking our project on [GitHub](https://github.com/mithril-security/blind_llama) and creating a new pull request. Make sure to detail the modifications you are suggesting in your pull request description.
+
+### 🌎 Spread the word
+
+Share our project on social media!
+
+[![share-on-twitter][twitter]][twitter-share]
+[![share-on-fb][fb-shield]][facebook-share]
+[![share-on-reddit][reddit-shield]][reddit-share]
+[![share-on-linkedin][linkedin-shield]][linkedin-share]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📇 Get in touch
+
+We would love to hear your feedback or suggestions, here are the ways you can reach us:
+  - Found a bug? [Open an issue!](https://github.com/mithril-security/blind_llama/issues)
+  - Got a suggestion? [Join our Discord community and let us know!](https://discord.com/invite/TxEHagpWd4)
+  - Set up [a one-on-one meeting](https://www.mithrilsecurity.io/contact) with a member of our team
+
+Want to hear more about our work on privacy in the field AI?
+- Check out our [blog](https://blog.mithrilsecurity.io/)
+- Subscribe to our newsletter [here](https://blog.mithrilsecurity.io/)
+
+Thank you for your support!
 
 ## 🔒 Who made BlindLlama?
 ________________________________________________________
@@ -144,3 +169,13 @@ BlindLlama is developed by **Mithril Security**, a startup focused on **democrat
 We have already had our first project, [BlindAI](https://github.com/mithril-security/blindai), an open-source Rust inference server that deploys ONNX models on Intel SGX secure enclaves, audited by [Quarkslab](https://www.quarkslab.com/).
 
 BlindLlama builds on the foundations of BlindAI but provides much faster performance and focuses on serving managed models directly to developers instead of helping AI engineers to deploy models.
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&colorB=555
+[reddit-shield]: https://img.shields.io/badge/reddit-0077B5?style=for-the-badge&logo=reddit&logoColor=white&colorB=FF4500
+[twitter]: https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white
+[fb-shield]: https://img.shields.io/badge/Facebook-0077B5?style=for-the-badge&logo=facebook&logoColor=white&colorB=3b5998
+[facebook-share]: https://www.facebook.com/sharer/sharer.php?u=https%3A//github.com/mithril-security/blind_llama
+[twitter-share]: https://twitter.com/intent/tweet?url=https://github.com/mithril-security/blind_llama&text=Check%20out%20this%20open-source%20project%20that%20aims%20to%20make%20AI%20private
+[linkedin-share]: https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/mithril-security/blind_llama
+[reddit-share]: https://www.reddit.com/submit?url=github.com%2Fmithril-security%2Fblind_llama&title=Private%20in-browser%20Conversational%20AI%20with%20BlindLlama
