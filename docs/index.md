@@ -151,11 +151,13 @@ Share our project on social media!
 ## 📇 Get in touch
 
 We would love to hear your feedback or suggestions, here are the ways you can reach us:
+
   - Found a bug? [Open an issue!](https://github.com/mithril-security/blind_llama/issues)
   - Got a suggestion? [Join our Discord community and let us know!](https://discord.com/invite/TxEHagpWd4)
   - Set up [a one-on-one meeting](https://www.mithrilsecurity.io/contact) with a member of our team
 
 Want to hear more about our work on privacy in the field AI?
+
 - Check out our [blog](https://blog.mithrilsecurity.io/)
 - Subscribe to our newsletter [here](https://blog.mithrilsecurity.io/)
 
