@@ -82,7 +82,7 @@ We welcome contributions to our project from the community! Don't hesitate to [r
 - Check out our [Quick tour](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/quick-tour/), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
 - Find out more about [How we protect your data](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/how-we-achieve-zero-trust/)
 - Refer to our [Concepts](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/overview/) guide for more information on key concepts
-- Learn more about BlindLlama's design with our [BlindLlama 101](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/blindllama-101/) guide
+- Learn more about BlindLlama's design [here](https://blindllama.mithrilsecurity.io/en/latest/docs/blind_llama/architecture/) guide
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -160,7 +160,7 @@ Several scenarios can be answered by using BlindLlama, such as:
 
 + BlindLlama is simply a drop-in replacement to query a remotely hosted model instead of having to go through complex local deployment. We do not cover training from scratch, but we will cover fine-tuning soon.
 + BlindLlama allows you to quickly and securely leverage models which are open-source, such as Llama 2, StarCoder, etc. **Proprietary models from OpenAI, Anthropic, and Cohere are not supported** yet as we would require them to modify their backend to offer a Zero-trust AI infrastructure like ours.
-+ **BlindLlama’s trust model implies some level of trust in Cloud providers and hardware providers** since we leverage secure hardware available and managed by Cloud providers (see our [trust model section](https://blindllama.readthedocs.io/en/latest/docs/getting-started/blindllama-101/) for more details).
++ **BlindLlama’s trust model implies some level of trust in Cloud providers and hardware providers** since we leverage secure hardware available and managed by Cloud providers (see our [trust model section](https://blindllama.mithrilsecurity.io/en/latest/docs/blind_llama/trust-model/) for more details).
 
 BlindLlama virtually provides the same level of security, privacy, and control as solutions provided by Cloud providers like Azure OpenAI Services.
 
@@ -286,7 +286,7 @@ Thank you for your support!
 [license-url]: https://github.com/mithril-security/aicert/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&colorB=555
 [twitter]: https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white
-[linkedin-url]: https://www.linkedin.com/company/mithril-security-company/
+[linkedin-url]: https://linkedin.com/company/mithril-security-company/
 [website-url]: https://www.mithrilsecurity.io
 [docs-url]: https://blindllama.mithrilsecurity.io/en/latest/
 [website-shield]: https://img.shields.io/badge/website-000000?style=for-the-badge&colorB=555
