@@ -1,4 +1,4 @@
-<link rel="icon" href="en/latest/assets/logo.png">
+<link rel="icon" href="https://blindllama.mithrilsecurity.io/en/latest/assets/logo.png">
 
 <%!
     from pdoc.html_helpers import minify_css
