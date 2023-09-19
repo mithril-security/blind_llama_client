@@ -66,7 +66,7 @@ ________________________________________________________
 - Discover the [architecture](./docs/blind_llama/architecture.md) and [trust model](./docs/blind_llama/trust-model.md) behind BlindLlama.
 - You can also check out our video introducing BlindLlama and walking you through the quick tour:
 
-<iframe src="https://drive.google.com/file/d/1DezM56PF0jmiqlWI2_mcHlsjW_GT9-Ly/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1DezM56PF0jmiqlWI2_mcHlsjW_GT9-Ly/preview" width="640" height="480"></iframe>
  
 <!--
 ## 📚 How is the documentation structured?
