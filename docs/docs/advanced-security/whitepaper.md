@@ -5,6 +5,6 @@ We launched the BlindLlama whitepaper to cover the architecture and security fea
 
 The whitepaper is intended for an audience with security expertise, contrary to the other sections within our documentation, which are aimed at a broader technical public.
 
-You can read or download the whitepaper [here](https://docsend.com/view/dkepc5fd8njh7i46)!
+You can read or download the whitepaper [here](https://github.com/mithril-security/blind_llama/tree/main/docs/docs/whitepaper/blind_llama_whitepaper.pdf)!
 
 > We will continue to update this whitepaper as and when required.

@@ -44,7 +44,7 @@ For users to fully trust us, there needs to be reviews of the codebase for both 
 
 Our code is open-source and we encourage the community to review our codebase. We have already had one of our AI deployment solutions, [BlindAI](https://github.com/mithril-security/blindai), audited by [Quarkslab](https://www.quarkslab.com/). Community and professional audits help to provide a high level of confidence that our hardened environments implement all the security checks we say they do.
 
-You can find get more details on our implementation of our Confidential & transparent APIs in our [whitepaper](https://docsend.com/view/dkepc5fd8njh7i46).
+You can find get more details on our implementation of our Confidential & transparent APIs in our [whitepaper](https://github.com/mithril-security/blind_llama/tree/main/docs/docs/whitepaper/blind_llama_whitepaper.pdf).
 
 
 ## Client side
@@ -66,4 +66,4 @@ The server also provides the client with its TLS certificate. This is unique to 
 
 More information about attestation and attested TLS can be found in our [concepts guide](../concepts/attested-tls.md).
 
-We also provide a BlindLlama whitepaper for an audience with security expertise which covers the architecture and security features behind BlindLLama in greater detail. You can read or download the whitepaper [here](https://docsend.com/view/dkepc5fd8njh7i46)!
+We also provide a BlindLlama whitepaper for an audience with security expertise which covers the architecture and security features behind BlindLLama in greater detail. You can read or download the whitepaper [here](https://github.com/mithril-security/blind_llama/tree/main/docs/docs/whitepaper/blind_llama_whitepaper.pdf)!
