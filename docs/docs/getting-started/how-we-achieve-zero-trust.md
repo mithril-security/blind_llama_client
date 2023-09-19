@@ -1,4 +1,4 @@
-# How we achieve zero trust
+# How we protect user data
 ________________________________________________________
 
 On this page, we will present a global overview of how we ensure that data sent to our Confidential & transparent AI APIs remains confidential and how we prove that even our own admins cannot see users’ data. 
