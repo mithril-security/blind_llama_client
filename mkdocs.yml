@@ -106,7 +106,7 @@ nav:
 
 - 🚀 Getting Started: 
   - Quick tour: 'docs/getting-started/quick-tour.ipynb'
-  - How we achieve zero trust: 'docs/getting-started/how-we-achieve-zero-trust.md'
+  - How we make APIs confidential: 'docs/getting-started/how-we-achieve-zero-trust.md'
 
 # - 📚 Integrations:
 #   -  Configure your YAML file: 'docs/tutorials/yaml.md'

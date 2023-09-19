@@ -53,9 +53,9 @@
 
 ### Introduction
 
-🛠️ **BlindLlama** makes it easy to use open-source LLMs by using **Zero-trust AI APIs** that abstract all the complexity of model deployment while ensuring **users’ data is never exposed** to us thanks to end-to-end protection with **secure hardware**.
+🛠️ **BlindLlama** makes it easy to use open-source LLMs by using **Confidential & transparent AI APIs** that abstract all the complexity of model deployment while ensuring **users’ data is never exposed** to us thanks to end-to-end protection with **secure hardware**.
 
-🔐 To provide guarantees to developers that data sent to our managed infrastructure is not exposed, we have developed a **Zero-trust architecture to serve AI models**.
+🔐 To provide guarantees to developers that data sent to our managed infrastructure is not exposed, we have developed a **Confidential & transparent architecture to serve AI models**.
 
 > We currently serve [Llama2](https://ai.meta.com/llama/) but will be making more open-source models available in the near future!
 
@@ -68,7 +68,7 @@ Our backend has two key properties:
 > **Warning**
 > BlindLlama is still **under development** and does have the full security features.
 >
-> Do not test our API with confidential information... yet!
+> Do not test our APIs with confidential information... yet!
 >
 > You can follow our progress towards the next beta and 1.0 versions of BlindLLama on our [roadmap](https://mithril-security.notion.site/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
 
@@ -90,7 +90,7 @@ We welcome contributions to our project from the community! Don't hesitate to [r
 
 BlindLlama is composed of two main parts:
 
-+ An **open-source client-side Python SDK** that verifies the remote Zero-trust AI models we serve are indeed guaranteeing data sent is not exposed to us.
++ An **open-source client-side Python SDK** that verifies the remote AI models we serve are indeed guaranteeing data sent is not exposed to us.
 + An **open-source server** that serves models without exposing any user data to the AI provider (Mithril security). This is achieved by hardening the server components and removing any potential leakage channels from network to logs. We provide cryptographic proof those privacy controls are indeed in place using [TPMs](./docs/docs/concepts/TPMs.md).
 
 The client performs two main tasks:
@@ -121,7 +121,7 @@ In the case of an AI provider serving an AI API to end users on a Cloud infrastr
 
 + **The Cloud provider**: they provide the infrastructure, Hypervisor, VMs and OS, to the AI provider. Examples of Cloud providers in the industry include Azure, GCP, AWS, etc. 
 
-+ **The hardware providers**: they provide the physical components, CPU, GPU, TPMs, etc. to the Cloud provider. Examples of hardware provders in the industry include Intel, AMD, Nvidia, etc. 
++ **The hardware providers**: they provide the physical components, CPU, GPU, TPMs, etc. to the Cloud provider. Examples of hardware providers in the industry include Intel, AMD, Nvidia, etc. 
 
 The higher the party in the stack, the closer they are to the data. Thus, the AI provider if malicious or negligent represents the biggest security risk for the user of the API.
 
@@ -131,7 +131,7 @@ For privacy-demanding users that require more technical guarantees, they often c
 
 ## Trusted parties with BlindLlama
 
-With BlindLlama, we remove the AI provider (Mithril Security) from the list of trusted parties. When models are served with BlindLlama, our admins cannot see user data because we use a Zero-trust AI infrastructure, removing the need for users to blindly trust us. 
+With BlindLlama, we remove the AI provider (Mithril Security) from the list of trusted parties. When models are served with BlindLlama, our admins cannot see user data because we use a Confidential & transparent AI infrastructure, removing the need for users to blindly trust us. 
 	
 We can prove such controls are in place using [TPM-based attestation](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/TPMs/).
 
@@ -159,7 +159,7 @@ Several scenarios can be answered by using BlindLlama, such as:
 #### ❌ What is not covered by BlindLlama?
 
 + BlindLlama is simply a drop-in replacement to query a remotely hosted model instead of having to go through complex local deployment. We do not cover training from scratch, but we will cover fine-tuning soon.
-+ BlindLlama allows you to quickly and securely leverage models which are open-source, such as Llama 2, StarCoder, etc. **Proprietary models from OpenAI, Anthropic, and Cohere are not supported** yet as we would require them to modify their backend to offer a Zero-trust AI infrastructure like ours.
++ BlindLlama allows you to quickly and securely leverage models which are open-source, such as Llama 2, StarCoder, etc. **Proprietary models from OpenAI, Anthropic, and Cohere are not supported** yet as we would require them to modify their backend to offer a Confidential & transparent AI infrastructure like ours.
 + **BlindLlama’s trust model implies some level of trust in Cloud providers and hardware providers** since we leverage secure hardware available and managed by Cloud providers (see our [trust model section](https://blindllama.mithrilsecurity.io/en/latest/docs/blind_llama/trust-model/) for more details).
 
 BlindLlama virtually provides the same level of security, privacy, and control as solutions provided by Cloud providers like Azure OpenAI Services.
@@ -209,7 +209,7 @@ The server-side code already includes the backbones for our attestation feature 
 
 ### BlindLlama Beta launch (with attestation):
 
-The beta version adds the full implementation of TPM-based attestation, meaning our API can be fully verified remotely. This version will not yet have full hardening of server-side environment or audit and thus is not yet recommended in production!
+The beta version adds the full implementation of TPM-based attestation, meaning our APIs can be fully verified remotely. This version will not yet have full hardening of server-side environment or audit and thus is not yet recommended in production!
 
 > Provisional launch date: week ending 06/10/2023
 
