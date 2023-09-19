@@ -10,9 +10,9 @@ ________________________________________________________
 
 ### Introduction
 
-🛠️ **BlindLlama** makes it easy to use open-source LLMs by using **Zero-trust AI APIs** that abstract all the complexity of model deployment while ensuring **users’ data is never exposed** to us thanks to end-to-end protection with **secure hardware**.
+🛠️ **BlindLlama** makes it easy to use open-source LLMs by using **Confidential & transparent AI APIs** that abstract all the complexity of model deployment while ensuring **users’ data is never exposed** to us thanks to end-to-end protection with **secure hardware**.
 
-🔐 To provide guarantees to developers that data sent to our managed infrastructure is not exposed, we have developed a **Zero-trust architecture to serve AI models**.
+🔐 To provide guarantees to developers that data sent to our managed infrastructure is not exposed, we have developed a **Confidential & transparent architecture to serve AI models**.
 
 > We currently serve [Llama2](https://ai.meta.com/llama/) but will be making more open-source models available in the near future!
 
@@ -53,7 +53,7 @@ Several scenarios can be answered by using BlindLlama, such as:
 #### ❌ What is not covered by BlindLlama?
 
 + BlindLlama is simply a drop-in replacement to query a remotely hosted model instead of having to go through complex local deployment. We do not cover training from scratch, but we will cover fine-tuning soon.
-+ BlindLlama allows you to quickly and securely leverage models which are open-source, such as Llama 2, StarCoder, etc. **Proprietary models from OpenAI, Anthropic, and Cohere are not supported** yet as we would require them to modify their backend to offer a Zero-trust AI infrastructure like ours.
++ BlindLlama allows you to quickly and securely leverage models which are open-source, such as Llama 2, StarCoder, etc. **Proprietary models from OpenAI, Anthropic, and Cohere are not supported** yet as we would require them to modify their backend to offer a Confidential & transparent AI infrastructure like ours.
 + **BlindLlama’s trust model implies some level of trust in Cloud providers and hardware providers** since we leverage secure hardware available and managed by Cloud providers (see our [trust model section](https://blindllama.mithrilsecurity.io/en/latest/docs/blind_llama/trust-model/) for more details).
 
 BlindLlama virtually provides the same level of security, privacy, and control as solutions provided by Cloud providers like Azure OpenAI Services.
@@ -64,6 +64,9 @@ ________________________________________________________
 - Check out our [Quick tour](./docs/getting-started/quick-tour.ipynb), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
 - Find out more about [How we protect your data](./docs/getting-started/how-we-achieve-zero-trust.md)
 - Discover the [architecture](./docs/blind_llama/architecture.md) and [trust model](./docs/blind_llama/trust-model.md) behind BlindLlama.
+- You can also check out our video introducing BlindLlama and walking you through the quick tour:
+
+<iframe src="https://drive.google.com/file/d/1DezM56PF0jmiqlWI2_mcHlsjW_GT9-Ly/preview" width="640" height="480" allow="autoplay"></iframe>
  
 <!--
 ## 📚 How is the documentation structured?
@@ -116,7 +119,7 @@ The server-side code includes the backbones for our attestation feature (which w
 
 ### BlindLlama Beta launch (attestable):
 
-The beta version adds the full implementation of TPM-based attestation, meaning our API can be fully verified remotely. This version will not yet have full hardening of server-side environment or audit and thus is not yet recommended in production!
+The beta version adds the full implementation of TPM-based attestation, meaning our APIs can be fully verified remotely. This version will not yet have full hardening of server-side environment or audit and thus is not yet recommended in production!
 
 > Provisional launch date: week ending 06/10/2023
 
@@ -127,26 +130,6 @@ A fully-secure version of BlindLlama ready for audit, with a fully hardened serv
 > Provisional launch date: week ending 08/12/2023
 
 You can check out more details about these stages and our progress to achieveing these milestones on our [official roadmap](https://mithril-security.notion.site/BlindLlama-roadmap-d55883a04be446e49e01ee884c203c26).
-
-
-## 🤝 Contributing
-
-Here’s how you can help us make AI confidential:
-
-### 🛠️ Code contribution
-
-You can contribute our code by forking our project on [GitHub](https://github.com/mithril-security/blind_llama) and creating a new pull request. Make sure to detail the modifications you are suggesting in your pull request description.
-
-### 🌎 Spread the word
-
-Share our project on social media!
-
-[![share-on-twitter][twitter]][twitter-share]
-[![share-on-fb][fb-shield]][facebook-share]
-[![share-on-reddit][reddit-shield]][reddit-share]
-[![share-on-linkedin][linkedin-shield]][linkedin-share]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📇 Get in touch
 
