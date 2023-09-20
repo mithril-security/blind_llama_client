@@ -8,9 +8,9 @@ ConnectionPool and HTTPSConnection with one goal only:
 running into SNI trouble.
 
 The usual technique to force an IP address on an HTTP connection with Requests
-is (assuming I want http://example.com/some/path on IP 1.2.3.4):
+is (assuming I want https://www.mithrilsecurity.io/contact on IP 1.2.3.4):
 
-requests.get("http://1.2.3.4/some/path", headers={'Host': 'example.com'})
+requests.get("http://1.2.3.4/contact", headers={'Host': 'mithrilsecurity.io'})
 
 this is useful if I want to specifically test how 1.2.3.4 is responding; for
 instance, if example.com is DNS round-robined to several IP
