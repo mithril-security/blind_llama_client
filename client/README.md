@@ -43,8 +43,9 @@
     <li><a href="#-use-cases">Use cases</a></li>
     <li><a href="#-advanced-security">Advanced security</a></li>
     <li><a href="#-vision-and-roadmap">Vision and roadmap</a></li>
-    <li><a href="#about-us">About us</a></li>
-    <li><a href="#-contact">Contact</a></li>
+    <li><a href="#-about-us">About us</a></li>
+    <li><a href="#-contributing">Contributing</a></li>
+    <li><a href="#-get-in-touch">Contact</a></li>
   </ol>
 </details>
 
@@ -62,7 +63,7 @@ Our backend has two key properties:
 
 + **Confidentiality**: Your data is **never accessible to us**. We serve AI models inside **hardened environments** that do not expose data even to our admins. All points of access, such as SSH, logs, networks, etc., are blocked to ensure the isolation of data.
 
-+ **Transparency**: We provide you with verifiable **cryptographic proof** that these controls are in place, thanks to the use of [Trusted Platform Modules (TPMs)](https://blindllama.readthedocs.io/en/latest/docs/getting-started/concepts/).
++ **Transparency**: We provide you with verifiable **cryptographic proof** that these controls are in place, thanks to the use of [Trusted Platform Modules (TPMs)](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/TPMs/).
 
 > **Warning**
 > BlindLlama is still **under development** and does have the full security features.
@@ -80,7 +81,7 @@ We welcome contributions to our project from the community! Don't hesitate to [r
 
 - Check out our [Quick tour](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/quick-tour/), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private and without the hassle of provisioning!
 - Find out more about [How we protect your data](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/how-we-achieve-zero-trust/)
-- Refer to our [Concepts](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/concepts/) guide for more information on key concepts
+- Refer to our [Concepts](https://blindllama.mithrilsecurity.io/en/latest/docs/concepts/overview/) guide for more information on key concepts
 - Learn more about BlindLlama's design with our [BlindLlama 101](https://blindllama.mithrilsecurity.io/en/latest/docs/getting-started/blindllama-101/) guide
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -235,17 +236,35 @@ BlindLlama builds on the foundations of BlindAI but provides much faster perform
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🤝 Contributing
+
+Here’s how you can help us make AI confidential:
+
+### 🛠️ Code contribution
+
+You can contribute our code by forking our project on [GitHub](https://github.com/mithril-security/blind_llama) and creating a new pull request. Make sure to detail the modifications you are suggesting in your pull request description.
+
+### 🌎 Spread the word
+
+Share our project on social media!
+
+[![share-on-twitter][twitter]][twitter-share]
+[![share-on-fb][fb-shield]][facebook-share]
+[![share-on-reddit][reddit-shield]][reddit-share]
+[![share-on-linkedin][linkedin-shield]][linkedin-share]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 📇 Get in touch
 
 We would love to hear your feedback or suggestions, here are the ways you can reach us:
-  - To request new features, go to the [discussions page](https://github.com/mithril-security/blind_llama/discussions) of our GitHub repo
   - Found a bug? [Open an issue!](https://github.com/mithril-security/blind_llama/issues)
-  - Want to be part of our Discord community? [Join us!](https://discord.com/invite/TxEHagpWd4)
+  - Got a suggestion? [Join our Discord community and let us know!](https://discord.com/invite/TxEHagpWd4)
   - Set up [a one-on-one meeting](https://www.mithrilsecurity.io/contact) with a member of our team
 
-Want to hear more about BlindLlama and privacy in the field AI?
+Want to hear more about our work on privacy in the field AI?
 - Check out our [blog](https://blog.mithrilsecurity.io/)
-- You can subscribe to our newsletter [here](https://blog.mithrilsecurity.io/)
+- Subscribe to our newsletter [here](https://blog.mithrilsecurity.io/)
 
 Thank you for your support!
 
@@ -257,6 +276,10 @@ Thank you for your support!
 [contact-url]: https://www.mithrilsecurity.io/contact
 [docs-shield]: https://img.shields.io/badge/Docs-000000?style=for-the-badge&colorB=555
 [docs-url]: https://blindllama.mithrilsecurity.io/en/latest/
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&colorB=555
+[reddit-shield]: https://img.shields.io/badge/reddit-0077B5?style=for-the-badge&logo=reddit&logoColor=white&colorB=FF4500
+[twitter]: https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white
+[fb-shield]: https://img.shields.io/badge/Facebook-0077B5?style=for-the-badge&logo=facebook&logoColor=white&colorB=3b5998
 [license-shield]: https://img.shields.io/github/license/mithril-security/aicert.svg?style=for-the-badge
 [contact]: https://img.shields.io/badge/Contact_us-000000?style=for-the-badge&colorB=555
 [project]: https://img.shields.io/badge/Project-000000?style=for-the-badge&colorB=555
@@ -277,3 +300,7 @@ Thank you for your support!
 [Intel-SGX]: https://img.shields.io/badge/SGX-FFD43B?style=for-the-badge&logo=intel&logoColor=black
 [Intel-sgx-url]: https://www.intel.fr/content/www/fr/fr/architecture-and-technology/software-guard-extensions.html
 [Tract]: https://img.shields.io/badge/Tract-FFD43B?style=for-the-badge
+[facebook-share]: https://www.facebook.com/sharer/sharer.php?u=https%3A//github.com/mithril-security/blind_llama
+[twitter-share]: https://twitter.com/intent/tweet?url=https://github.com/mithril-security/blind_llama&text=Check%20out%20this%20open-source%20project%20that%20aims%20to%20make%20AI%20private
+[linkedin-share]: https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/mithril-security/blind_llama
+[reddit-share]: https://www.reddit.com/submit?url=github.com%2Fmithril-security%2Fblind_llama&title=Private%20in-browser%20Conversational%20AI%20with%20BlindLlama
