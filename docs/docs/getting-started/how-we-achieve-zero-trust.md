@@ -1,3 +1,7 @@
+---
+description: "Strategy of BlindLlama for data confidentiality: Secure, transparent systems including hardened AI server and auditability."
+---
+
 # How we protect user data
 ________________________________________________________
 
