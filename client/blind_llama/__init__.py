@@ -1,6 +1,7 @@
 import os
 
 __all__ = []
+__pdoc__ = {'logging': False}
 
 try:
     from . import completion
