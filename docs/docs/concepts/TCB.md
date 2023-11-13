@@ -1,3 +1,7 @@
+---
+description: "Learn more about the cybersecurity concept of the Trusted Computing Base (TCB) and discover BlindLLama's TCB"
+---
+
 # Trusted Computing Base (TCB)
 ________________________________________________________
 
