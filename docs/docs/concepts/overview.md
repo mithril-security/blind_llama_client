@@ -1,3 +1,7 @@
+---
+description: "Dive into BlindLlama's core concepts: Key principles of its architecture and security measures."
+---
+
 # Overview
 ________________________________________________________
 

@@ -1,3 +1,7 @@
+---
+description: "BlindLlama: Confidential & transparent AI APIs. Discover use cases, when to use, and roadmap for privacy-friendly AI."
+---
+
 # 👋 Welcome to BlindLlama!
 ________________________________________________________
 

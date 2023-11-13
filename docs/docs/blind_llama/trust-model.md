@@ -1,3 +1,7 @@
+---
+description: "Delve into BlindLlama's trust model: Compare AI, cloud, and hardware providers' roles with BlindLlama's unique approach."
+---
+
 # Trust model
 ________________________________________________________
 

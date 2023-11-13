@@ -1,3 +1,7 @@
+---
+description: "Understand hardened systems in data security: No special admin privileges or backdoors, securing confidential data access."
+---
+
 # Hardened systems
 ________________________________________________________
 

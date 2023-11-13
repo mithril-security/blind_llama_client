@@ -1,3 +1,7 @@
+---
+description: "Explore TPMs in BlindLlama: Understand their role in data security, cryptographic capabilities, and secure storage."
+---
+
 # Trusted Platform Modules (TPMs)
 ________________________________________________________
 

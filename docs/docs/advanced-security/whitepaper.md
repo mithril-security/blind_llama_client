@@ -1,3 +1,7 @@
+---
+description: "Deep dive with the BlindLlama Whitepaper: In-depth insights into its architecture and security for a security-savvy audience."
+---
+
 # Introducing the BlindLlama whitepaper
 ________________________________________________________
 

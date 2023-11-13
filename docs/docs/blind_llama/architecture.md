@@ -1,3 +1,7 @@
+---
+description: "Uncover BlindLlama's architecture: Open-source client-side Python SDK and server with three integral components."
+---
+
 # Architecture
 ________________________________________________________
 
