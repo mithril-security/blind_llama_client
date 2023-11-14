@@ -1,3 +1,7 @@
+---
+description: "Learn how attested TLS allows us to verify the BLindLLama server's identity and protect against man-in-the-middle attacks"
+---
+
 # Attested TLS
 ________________________________________________________
 
