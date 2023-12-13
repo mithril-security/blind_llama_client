@@ -23,6 +23,7 @@ link_tag="<link rel=\"canonical\" href=\"https://blindllama.mithrilsecurity.io/e
 for file in "${files[@]}"; do
   # Check if the file exists before modifying it
   if [ -e "docs/blind_llama/$file.html" ]; then
+    sed -i '/<meta name="description" content=""/d' "docs/blind_llama/$file.html"
     sed -i "/<head>/a $link_tag" "docs/blind_llama/$file.html"
   fi
 done
