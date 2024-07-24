@@ -14,7 +14,7 @@ ________________________________________________________
 
 ### Introduction
 
-🛠️ **BlindLlama** make AI **Confidential and Transparent** by ensuring **users data is never exposed**, thanks to end-to-end protection with **secure hardware**.
+🛠️ **BlindLlama** make AI **Confidential and Transparent** by ensuring **users' data is never exposed**, thanks to end-to-end protection with **secure hardware**.
 
 🔐 To guarantee that data sent to the inference server remains protected, we have developed a **Confidential and Transparent architecture to serve AI models**.
 

@@ -5,7 +5,7 @@ description: "Strategy of BlindLlama for data confidentiality: Secure, transpare
 # How we protect user data
 ________________________________________________________
 
-On this page, we will present a global overview of how we ensure that data sent to our Confidential & transparent AI environment, secure enclaves, remains confidential and how we prove that even admins cannot see users data.
+On this page, we will present a global overview of how we ensure that data sent to our Confidential & transparent AI environment, secure enclaves, remains confidential and how we prove that even admins cannot see users' data.
 
 > The [concepts section](../concepts/overview.md) provides a more in-depth explanation of the building blocks we use to ensure user data remains private.
 
