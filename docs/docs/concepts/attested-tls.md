@@ -21,7 +21,7 @@ Let's take a look at how we attested TLS works in BlindLlama step-by-step:
 
 ### Server side
 
-1. We deploy the BlindLlama server on Mithril Cloud
+1. We deploy the BlindLlama server on a Cloud
 2. On deployment, the server creates a tls-terminating reverse proxy. The reverse proxy provider takes care of generating the TLS certificate required for secure communications. Since this is done within our hardened isolated environment, it remains protected and is not accessible even to our admins. The client will communicate with this reverse proxy server, which will relay the inbound/outbound communications to the BlindLlama server.
 3. The TLS certificate is hashed by the BlindLlama server and stored in the TPM platform register PCR15. For more details about TPMs and PCRs, see our guide on [TPMs](./TPMs.md).
 4. The TLS certificate is hashed and included in the TPM's quote, which is then shared with clients when they connect with the server for verification.
