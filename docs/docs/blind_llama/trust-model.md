@@ -27,7 +27,7 @@ For privacy-demanding users that require more technical guarantees, they often c
 
 ## Trusted parties with BlindLlama
 
-With BlindLlama, we remove the AI provider (Mithril Security) from the list of trusted parties. When models are served with BlindLlama, our admins cannot see user data because we use a Confidential & transparent AI infrastructure, removing the need for users to blindly trust us. 
+With BlindLlama, we remove the AI provider from the list of trusted parties. When models are served with BlindLlama, admins cannot see user data because we use a Confidential & transparent AI infrastructure, removing the need for users to blindly trust the provider.
 	
 We can prove such controls are in place using [TPM-based attestation](../concepts/TPMs.md).
 
