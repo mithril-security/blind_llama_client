@@ -59,7 +59,7 @@ The BlindLlama server includes this TPM's quote in a cryptographic proof file, w
 
 ### Client side: verifying the proof file
 
-When an end user queries our BlindLlama API, before a secure connection can be established with the server, the client will receive and verify the server's **cryptographic proof file**, which contains **the TPM's quote** signed by the private AK. 
+When an end user queries our BlindLlama hardened environment, before a secure connection can be established with the server, the client will receive and verify the server's **cryptographic proof file**, which contains **the TPM's quote** signed by the private AK. 
 
 The client also receives a [cert chain](https://www.ibm.com/docs/en/ztpf/1.1.0.15?topic=ca-certificate-chain-verification), a chain of certificates, which is used to verify the TPM quote’s signature.
 

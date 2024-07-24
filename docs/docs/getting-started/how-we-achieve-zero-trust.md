@@ -5,15 +5,15 @@ description: "Strategy of BlindLlama for data confidentiality: Secure, transpare
 # How we protect user data
 ________________________________________________________
 
-On this page, we will present a global overview of how we ensure that data sent to our Confidential & transparent AI APIs remains confidential and how we prove that even our own admins cannot see users’ data. 
+On this page, we will present a global overview of how we ensure that data sent to our Confidential & transparent AI environment, secure enclaves, remains confidential and how we prove that even admins cannot see users data.
 
-> The [concepts section](../concepts/overview.md) provides a more in-depth explanation of the building blocks we use to ensure user data remains private in our Confidential & transparent AI APIs.
+> The [concepts section](../concepts/overview.md) provides a more in-depth explanation of the building blocks we use to ensure user data remains private.
 
 The key to providing end-to-end protection is our **secure and transparent systems by design**:
 
 - We design the **hardened AI server to be verifiable**.
 
-- We provide a client library to **securely consume** the AI API. 
+- We provide a client library to **securely consume** the AI server. 
 
 - BlindLlama is also **optimized for auditability**, so that external auditors can completely audit the solution. 
 
@@ -26,7 +26,7 @@ At the end of this process, users will know that when using our Python SDK, **th
 
 ### 1. Hardening the AI server to ensure privacy
 
-We remove all admin/operator access from the AI server, such as SSH access to the machine. This means that once the AI server is running, we are blind to data sent to the service. Because we have no access to data, we can neither see it nor use it for any other purposes. This ensures that no insider threat can impact our production services.
+We remove all admin/operator access from the AI server, such as SSH access to the machine. This means that once the AI server is running, we are blind to data sent to the service. Because we have no access to data, we can neither see it nor use it for any other purposes. This ensures that no insider threat can impact the production services.
 
 We provide more details about **hardened systems** in our [concepts guide](../concepts/hardened-systems.md).
 

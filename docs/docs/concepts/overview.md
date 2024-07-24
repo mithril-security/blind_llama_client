@@ -9,7 +9,7 @@ In this `concepts` section, we will describe the key concepts that are at the co
 
 The concepts we will cover are:
 
-+ [**Hardened systems**](./hardened-systems.md): We describe how we use hardened systems to eliminate data exposure, even to our admins
++ [**Hardened systems**](./hardened-systems.md): We describe how we use hardened systems to eliminate data exposure, even to admins
 + [**Trusted Computing Base (TCB)**](./TCB.md): We detail which elements of our computing base are trusted or attested
 + [**Trusted Platform Modules (TPMs)**](./TPMs.md): We explain how we use TPMs to provide cryptographic proof that our privacy and security measures are in place
 + [**Attested TLS**](./TPMs.md): We describe how we combine secure communications with attested hardened environments to provide robust end-to-end data protection and prove we are communicating with our hardened environment
