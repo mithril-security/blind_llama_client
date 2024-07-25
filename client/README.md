@@ -170,7 +170,7 @@ BlindLlama virtually provides the same level of security, privacy, and control a
 ## 📚 How is the documentation structured?
 ____________________________________________
 <!--
-- [Tutorials](./docs/tutorials/core/installation.md) take you by the hand to install and run BlindBox. We recommend you start with the **[Quick tour](./docs/getting-started/quick-tour.ipynb)** and then move on to the other tutorials!  
+- [Tutorials](./docs/tutorials/core/installation.md) take you by the hand to install and run BlindBox. We recommend you start with the **[Quick tour](./docs/getting-started/quick-tour.md)** and then move on to the other tutorials!  
 
 - [Concepts](./docs/concepts/nitro-enclaves.md) guides discuss key topics and concepts at a high level. They provide useful background information and explanations, especially on cybersecurity.
 
