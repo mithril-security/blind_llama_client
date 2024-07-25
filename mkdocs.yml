@@ -102,7 +102,7 @@ nav:
   - Trust model: './docs/blind_llama/trust-model.md'
 
 - 🚀 Getting Started: 
-  - Quick tour: 'docs/getting-started/quick-tour.ipynb'
+  - Quick tour: 'docs/getting-started/quick-tour.md'
   - How we make APIs confidential: 'docs/getting-started/how-we-achieve-zero-trust.md'
 
 # - 📚 Integrations:

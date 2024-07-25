@@ -98,12 +98,15 @@ The network policy file can be found in the annex.
 
 ## 🔍 Go Furthur
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pDDU_ABXPfE?si=iZmRPDhXxienBvYX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 For more information, visit our [GitHub repository](https://github.com/mithril-security/blindllama-v2). There, you can:
 
 
 - [Generate measurements of the disks](https://github.com/mithril-security/blindllama-v2?tab=readme-ov-file#2---generating-measurements) used by the client to verify the server
 - [Deploy the image on the appropriate Azure VM](https://github.com/mithril-security/blindllama-v2?tab=readme-ov-file#3---deploying-it-on-azure) once the disks are created
 - [Consume the model securely](https://github.com/mithril-security/blindllama-v2?tab=readme-ov-file#4---confidential-consumption-with-attested-tls) through our Python Client SDK, which performs attestation by verifying the measurements of the enclave, ensuring they come from genuine vTPMs and that the measurements match the expected secure version of our code
+
 
 ## 🔒 Security
 ________________________________________________________
