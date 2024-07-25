@@ -57,7 +57,7 @@ BlindLlama virtually provides the same level of security, privacy, and control a
 ## 🚀 Getting started
 ________________________________________________________
 
-- Check out our [Quick tour](./docs/getting-started/quick-tour.ipynb), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private!
+- Check out our [Quick tour](./docs/getting-started/quick-tour.md), which will enable you to play with an example using the [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b) model while ensuring your data remains private!
 - Find out more about [How we protect your data](./docs/getting-started/how-we-achieve-zero-trust.md)
 - Discover the [architecture](./docs/blind_llama/architecture.md) and [trust model](./docs/blind_llama/trust-model.md) behind BlindLlama.
 <!-- You can also check out our video introducing BlindLlama and walking you through the quick tour:
@@ -68,7 +68,7 @@ ________________________________________________________
 ## 📚 How is the documentation structured?
 ____________________________________________
 <!--
-- [Tutorials](./docs/tutorials/core/installation.md) take you by the hand to install and run BlindBox. We recommend you start with the **[Quick tour](./docs/getting-started/quick-tour.ipynb)** and then move on to the other tutorials!  
+- [Tutorials](./docs/tutorials/core/installation.md) take you by the hand to install and run BlindBox. We recommend you start with the **[Quick tour](./docs/getting-started/quick-tour.md)** and then move on to the other tutorials!  
 
 - [Concepts](./docs/concepts/nitro-enclaves.md) guides discuss key topics and concepts at a high level. They provide useful background information and explanations, especially on cybersecurity.
 
